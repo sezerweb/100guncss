@@ -8,7 +8,7 @@
   margin-left: -200px;
   border-radius: 2px;
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: #444;
+  background: rgb(0, 0, 0);
   color: #fff;
 }
 
@@ -26,153 +26,126 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-
-  .sky {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 170px;
-    background: #7ddffc;
-    animation: sky-colour 6s linear infinite reverse;
-  }
-  .ground {
-    position: absolute;
-    z-index: 12;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: #ecd556;
-    animation: ground-colour 6s linear infinite reverse;
-  }
-
-  .sun {
-    width: 30px;
-    height: 30px;
-    background: yellow;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    margin: auto;
-    animation: sun-circle 6s linear infinite;
-  }
-  .moon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    margin: auto;
-    animation: moon-circle 6s linear infinite;
-    background-color: transparent;
-    box-shadow: 1px 5px 0px 0px #fff;
-  }
 }
 
+.sky {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 170px;
+  background: #7ddffc;
+  animation: sky-colour 6s linear infinite reverse;
+}
+
+@keyframes sky-colour {
+  0% {
+    background: #000;
+  }
+
+  50% {
+    background: #7ddffc;
+  }
+
+  100% {
+    background: #000;
+  }
+}
 
 .side-left {
-    position: absolute;
-    z-index: 10;
-    top: 91px;
-    left: 65px;
-    height: 80px;
-    width: 150px;
-    background: #fff;
-    clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
-    animation: pyramide-shading 65s linear infinite;
-  }
-  
-  .side-right {
-    position: absolute;
-    z-index: 11;
-    top: 91px;
-    left: 140px;
-    height: 80px;
-    width: 115px;
-    background: #ccc;
-    clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
-    animation: pyramide-shading 6s linear infinite ;
-
-    
-  }
-
-  .shadow {
-    position: absolute;
-    z-index: 2;
-    top: 170px;
-    left: 28px;
-    height: 25px;
-    width: 340px;
-    background: rgba(0,0,0,0.2);
-    transform-origin: 50% 0%;
-    clip-path: polygon(80px 0%, 182px 0%, 80% 100%);
-    display: none;
-   // animation: shadow-on-the-floor 6s  linear infinite;
+  position: absolute;
+  z-index: 10;
+  top: 91px;
+  left: 65px;
+  height: 80px;
+  width: 150px;
+  background: rgb(255, 255, 255);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: pyramide-shading-left 6s linear 3s infinite;
 }
 
-
-.stars {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	background: transparent;
-	@for $i from 0 to 30 {
-		.star:nth-of-type(#{$i}) {
-			width: 1px;
-			height: 1px;
-			position: absolute;
-			top: random(300) + px;
-			left: random(300) + px;
-			background: white;
-			animation: starFade 6s linear infinite; 
-		}
-	}
-}
-
-@keyframes starFade {
-	0% {
-		opacity:1;
-	}
-
-    50% {
-		opacity: 0;
-	}
-
-    100% {
-		opacity:1;
-	}
-}
-
-
-@keyframes pyramide-shading {
-	0% {
-	  background: #ccc;
-	}
-	  
-	  30% {
-		  background: #fff;
-	  }
-	  
-	  70% {
-		  background: #ccc;
-	  }
-  
-	100% {
-	  background: #fff;
-	}
+@keyframes pyramide-shading-left {
+  0% {
+    background: rgb(255, 255, 255);
+  }
+  33% {
+    background: rgb(126, 125, 125);
+  }
+  66% {
+    background: rgb(255, 255, 255);
   }
 
+  100% {
+    background: rgb(126, 125, 125);
+  }
+}
 
+.side-right {
+  position: absolute;
+  z-index: 11;
+  top: 91px;
+  left: 140px;
+  height: 80px;
+  width: 115px;
+  background: rgb(126, 125, 125);
+  clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+  animation: pyramide-shading-right 6s linear 3s infinite;
+}
+
+@keyframes pyramide-shading-right {
+  0% {
+    background: rgb(126, 125, 125);
+  }
+  33% {
+    background: rgb(255, 255, 255);
+  }
+  66% {
+    background: rgb(126, 125, 125);
+  }
+
+  100% {
+    background: rgb(255, 255, 255);
+  }
+}
+
+.shadow {
+  position: absolute;
+  z-index: 28;
+  top: 170px;
+  left: 28px;
+  height: 25px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.2);
+  transform-origin: 50% 0%;
+  clip-path: polygon(37px 0%, 225px 0%, 100% 100%);
+  animation: shadow-on-the-floor 6s linear infinite;
+}
+
+@keyframes shadow-on-the-floor {
+  0% {
+    clip-path: polygon(37px 0%, 225px 0%, 120% 100%);
+  }
+
+  100% {
+    clip-path: polygon(37px 0%, 225px 0%, -120% 0%);
+  }
+}
+
+.sun {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: sun-circle 6s linear infinite;
+}
 
 @keyframes sun-circle {
   0% {
@@ -192,31 +165,77 @@
     transform: rotate(360deg) translate(100px);
   }
 }
+.moon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  animation: moon-circle 6s linear infinite;
+  background-color: transparent;
+  box-shadow: 1px 5px 0px 0px #fff;
+}
 
-@keyframes sky-colour {
-  0% {
-    background: #000;
-  }
-
-  50% {
-    background: #7ddffc;
-  }
-
-  100% {
-    background: #000;
+.stars {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: transparent;
+  @for $i from 0 to 30 {
+    .star:nth-of-type(#{$i}) {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      top: random(300) + px;
+      left: random(300) + px;
+      background: white;
+      animation: starFade 6s linear 3s infinite;
+      opacity: 0;
+    }
   }
 }
 
-@keyframes ground-colour {
-    0% {
-      background: #423f0c;
-    }
-  
-    50% {
-      background: #ecd556;
-    }
-  
-    100% {
-      background: #2c2a08;
-    }
+@keyframes starFade {
+  0% {
+    opacity: 1;
   }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ground {
+  position: absolute;
+  z-index: 12;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: #ecd556;
+  animation: ground-colour 6s linear infinite reverse;
+}
+
+@keyframes ground-colour {
+  0% {
+    background: #423f0c;
+  }
+
+  50% {
+    background: #ecd556;
+  }
+
+  100% {
+    background: #2c2a08;
+  }
+}
