@@ -1,0 +1,167 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #272c34;
+  color: #fff;
+}
+
+.sky {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: #7ddffc;
+}
+
+.sun {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 100px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffef00;
+  -webkit-animation: sun-goes-down 6s linear infinite;
+          animation: sun-goes-down 6s linear infinite;
+  -webkit-transform-origin: 100px 200px;
+          transform-origin: 100px 200px;
+}
+
+.moon {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 100px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: moon-goes-down 6s linear 6s infinite;
+          animation: moon-goes-down 6s linear 6s infinite;
+  -webkit-transform-origin: 100px 200px;
+          transform-origin: 100px 200px;
+}
+
+.ground {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: #f0de75;
+}
+
+@-webkit-keyframes sun-goes-down {
+  0% {
+    background: #f57209;
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg);
+  }
+  25% {
+    background: #f0bd16;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    background: #f3cf57;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    background: #f78d37;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    background: #f57209;
+    -webkit-transform: rotate(115deg);
+            transform: rotate(115deg);
+  }
+}
+
+@keyframes sun-goes-down {
+  0% {
+    background: #f57209;
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg);
+  }
+  25% {
+    background: #f0bd16;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    background: #f3cf57;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    background: #f78d37;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    background: #f57209;
+    -webkit-transform: rotate(115deg);
+            transform: rotate(115deg);
+  }
+}
+
+@-webkit-keyframes moon-goes-down {
+  0% {
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    -webkit-transform: rotate(115deg);
+            transform: rotate(115deg);
+  }
+}
+
+@keyframes moon-goes-down {
+  0% {
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  100% {
+    -webkit-transform: rotate(115deg);
+            transform: rotate(115deg);
+  }
+}
+/*# sourceMappingURL=main3.css.map */
