@@ -86,8 +86,7 @@ $bezier: cubic-bezier(.21,.98,.6,.99);
 	border-radius: 50%;
 	animation-fill-mode: both;
 	animation: jump-jump-3 2s $bezier infinite alternate;
-
-}
+} 
 
 @keyframes jump-jump-3 {
 	0%, 10% {
@@ -100,5 +99,3 @@ $bezier: cubic-bezier(.21,.98,.6,.99);
 		transform: scale(2);
 	}
 }
-
-
