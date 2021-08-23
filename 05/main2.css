@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #19b9ce;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  height: 220px;
+  width: 280px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 1px solid #19b9ce;
+}
+
+.card .header {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: #ee6516;
+  color: #fff;
+}
+
+.card .title {
+  top: 12px;
+  left: 15px;
+}
+
+.card .big {
+  position: absolute;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card .date {
+  top: 30px;
+  left: 15px;
+}
+
+.card .small {
+  position: absolute;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.card .type {
+  top: 14px;
+  right: 15px;
+}
+
+.card .value {
+  top: 28px;
+  right: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.parameter {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+
+.parameter span {
+  position: relative;
+  font-size: 9px;
+  color: #606060;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+
+.parameter span:before {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.parameter .red:before {
+  background: #74da74;
+}
+
+.parameter .blue:before {
+  background: #d174e4;
+}
+
+.statistics {
+  position: relative;
+  height: 81px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.statistics .line-1, .statistics .line-2, .statistics .line-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #f2f2f2;
+}
+
+.statistics .line-2 {
+  top: 40px;
+}
+
+.statistics .line-3 {
+  top: inherit;
+  bottom: 0;
+}
+
+.statistics .data svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.statistics .data polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.statistics .data.red polyline {
+  stroke: #74da74;
+}
+
+.statistics .data.blue polyline {
+  stroke: #d174e4;
+}
+
+.statistics .data .tooltip {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 10px, 0);
+          transform: translate3d(-50%, 10px, 0);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  color: #fff;
+  padding: 8px 6px;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+  transition: opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+}
+
+.statistics .data .tooltip:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.statistics .data [class^="point-"] {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.statistics .data [class^="point-"]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+
+.statistics .data.red [class^="point-"],
+.statistics .data.red .tooltip,
+.statistics .data.red .tooltip:after {
+  background: #74da74;
+}
+
+.statistics .data.red .point-1 {
+  left: 7px;
+  top: 43px;
+}
+
+.statistics .data.red .point-2 {
+  left: 47px;
+  top: 0;
+}
+
+.statistics .data.red .point-3 {
+  left: 87px;
+  top: 30px;
+}
+
+.statistics .data.red .point-4 {
+  left: 127px;
+  top: 8px;
+}
+
+.statistics .data.red .point-5 {
+  left: 169px;
+  top: 35px;
+}
+
+.statistics .data.red .point-6 {
+  left: 209px;
+  top: 45px;
+}
+
+.statistics .data.red .point-7 {
+  left: 249px;
+  top: 16px;
+}
+
+.statistics .data.blue [class^="point-"],
+.statistics .data.blue .tooltip,
+.statistics .data.blue .tooltip:after {
+  background: #d174e4;
+}
+
+.statistics .data.blue .point-1 {
+  left: 7px;
+  top: 58px;
+}
+
+.statistics .data.blue .point-2 {
+  left: 48px;
+  top: 47px;
+}
+
+.statistics .data.blue .point-3 {
+  left: 88px;
+  top: 62px;
+}
+
+.statistics .data.blue .point-4 {
+  left: 128px;
+  top: 52px;
+}
+
+.statistics .data.blue .point-5 {
+  left: 169px;
+  top: 68px;
+}
+
+.statistics .data.blue .point-6 {
+  left: 207px;
+  top: 71px;
+}
+
+.statistics .data.blue .point-7 {
+  left: 249px;
+  top: 51px;
+}
+
+.days {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.days .day {
+  display: block;
+  float: left;
+  width: 14.28571%;
+  font-size: 9px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*# sourceMappingURL=main2.css.map */
