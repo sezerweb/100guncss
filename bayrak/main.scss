@@ -1,0 +1,80 @@
+$kirmizi : rgb(227, 10, 23);
+$beyaz :rgb(255,255,255);
+$g:1;
+$l:1.5;
+$m : 1/30 ;
+$a : 1/2 ;
+$d:0.4;
+$c:1/16;
+$e:1/3;
+$f:1/4;
+$gwidth : 500px ;
+
+body{
+    background-color: rgb(95, 194, 233);
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: ($gwidth * $l)+($gwidth*$m);
+    height: $gwidth * $g;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    z-index: 0;
+  }
+
+  .uckurluk{
+    width: $gwidth*$m;
+    height: $gwidth * $g;
+    background-color:$beyaz;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+  }
+
+  .yuzey{
+    width: $gwidth * $l;
+    height: $gwidth * $g;
+    background-color:$kirmizi;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .ay{
+    width: $gwidth * $a;
+    height: $gwidth * $a;
+    background-color:$beyaz;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    left: ($gwidth * $a /2)+($gwidth*$m);
+    top: ($gwidth * $a / 2);
+  }
+  .ayIc{
+    width: $gwidth * $d;
+    height: $gwidth * $d;
+    background-color:$kirmizi;
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    left: ((($gwidth * $a) + ($gwidth * $c)) - ($gwidth * $d)/2)+($gwidth*$m);
+    top: ($gwidth/10)*3 ;
+  
+  }
+
+  .yildiz {
+    background: $beyaz;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: $gwidth * $f;
+    width: $gwidth * $f;
+    position: absolute;
+    z-index: 4;
+    left: (((($gwidth * $a) + ($gwidth * $c)) - ($gwidth * $d)/2)+($gwidth * $e))+($gwidth*$m);
+    top: ($gwidth /2 ) - ($gwidth * $f) / 2;
+    transform: rotate(54deg);
+  }
+ 
