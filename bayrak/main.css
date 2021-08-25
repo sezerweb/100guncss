@@ -6,8 +6,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 766.66667px;
-  height: 500px;
+  width: 306.66667px;
+  height: 200px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 0;
@@ -15,8 +15,8 @@ body {
 }
 
 .uckurluk {
-  width: 16.66667px;
-  height: 500px;
+  width: 6.66667px;
+  height: 200px;
   background-color: white;
   position: absolute;
   z-index: 1;
@@ -24,8 +24,8 @@ body {
 }
 
 .yuzey {
-  width: 750px;
-  height: 500px;
+  width: 300px;
+  height: 200px;
   background-color: #e30a17;
   position: absolute;
   right: 0;
@@ -33,25 +33,25 @@ body {
 }
 
 .ay {
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   background-color: white;
   position: absolute;
   z-index: 2;
   border-radius: 50%;
-  left: 141.66667px;
-  top: 125px;
+  left: 56.66667px;
+  top: 50px;
 }
 
 .ayIc {
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   background-color: #e30a17;
   position: absolute;
   z-index: 3;
   border-radius: 50%;
-  left: 197.91667px;
-  top: 150px;
+  left: 79.16667px;
+  top: 60px;
 }
 
 .yildiz {
@@ -59,12 +59,12 @@ body {
   -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
           clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   display: inline-block;
-  height: 125px;
-  width: 125px;
+  height: 50px;
+  width: 50px;
   position: absolute;
   z-index: 4;
-  left: 364.58333px;
-  top: 187.5px;
+  left: 145.83333px;
+  top: 75px;
   -webkit-transform: rotate(54deg);
           transform: rotate(54deg);
 }
