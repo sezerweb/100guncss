@@ -9,7 +9,7 @@
   border-radius: 2px;
   -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: #272C34;
+  background: #1e1f26;
   color: #fff;
 }
 
@@ -24,280 +24,1881 @@
 .circle {
   position: relative;
   overflow: hidden;
-  -webkit-clip-path: circle(90px at 90px 90px);
-          clip-path: circle(90px at 90px 90px);
-  width: 180px;
-  height: 180px;
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
 }
 
-.circle .sky {
+.sky {
   position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
   right: 0;
-  height: 124px;
-  background: #7DDFFC;
-  -webkit-animation: sky-turns-black 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-          animation: sky-turns-black 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+  height: 170px;
+  background: #7ddffc;
+  animation: sky-colour 6s linear infinite reverse;
 }
 
-.circle .sun {
-  position: absolute;
-  z-index: 2;
-  top: 7px;
-  left: 73px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #FFEF00;
-  -webkit-transform-origin: 50% 400%;
-          transform-origin: 50% 400%;
-  -webkit-animation: sun-goes-down 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-          animation: sun-goes-down 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+@-webkit-keyframes sky-colour {
+  0% {
+    background: #000;
+  }
+  50% {
+    background: #7ddffc;
+  }
+  100% {
+    background: #000;
+  }
 }
 
-.circle .side-left {
+@keyframes sky-colour {
+  0% {
+    background: #000;
+  }
+  50% {
+    background: #7ddffc;
+  }
+  100% {
+    background: #000;
+  }
+}
+
+.side-left {
   position: absolute;
-  top: 67px;
-  left: 35px;
-  height: 57px;
-  width: 116px;
-  background: #F4F4F4;
+  z-index: 10;
+  top: 91px;
+  left: 65px;
+  height: 80px;
+  width: 150px;
+  background: white;
   -webkit-clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
           clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
-  -webkit-animation: pyramide-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-          animation: pyramide-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+  -webkit-animation: pyramide-shading-left 6s linear 3s infinite;
+          animation: pyramide-shading-left 6s linear 3s infinite;
 }
 
-.circle .side-right {
+@-webkit-keyframes pyramide-shading-left {
+  0% {
+    background: white;
+  }
+  33% {
+    background: #7e7d7d;
+  }
+  66% {
+    background: white;
+  }
+  100% {
+    background: #7e7d7d;
+  }
+}
+
+@keyframes pyramide-shading-left {
+  0% {
+    background: white;
+  }
+  33% {
+    background: #7e7d7d;
+  }
+  66% {
+    background: white;
+  }
+  100% {
+    background: #7e7d7d;
+  }
+}
+
+.side-right {
   position: absolute;
-  top: 67px;
-  left: 93px;
-  height: 57px;
-  width: 58px;
-  background: #DDDADA;
+  z-index: 11;
+  top: 91px;
+  left: 140px;
+  height: 80px;
+  width: 115px;
+  background: #7e7d7d;
   -webkit-clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
           clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
-  animation: pyramide-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite reverse;
+  -webkit-animation: pyramide-shading-right 6s linear 3s infinite;
+          animation: pyramide-shading-right 6s linear 3s infinite;
 }
 
-.circle .shadow {
+@-webkit-keyframes pyramide-shading-right {
+  0% {
+    background: #7e7d7d;
+  }
+  33% {
+    background: white;
+  }
+  66% {
+    background: #7e7d7d;
+  }
+  100% {
+    background: white;
+  }
+}
+
+@keyframes pyramide-shading-right {
+  0% {
+    background: #7e7d7d;
+  }
+  33% {
+    background: white;
+  }
+  66% {
+    background: #7e7d7d;
+  }
+  100% {
+    background: white;
+  }
+}
+
+.shadow {
   position: absolute;
-  z-index: 2;
-  top: 124px;
-  left: -80px;
-  height: 30px;
-  width: 360px;
+  z-index: 28;
+  top: 170px;
+  left: 28px;
+  height: 25px;
+  width: 300px;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
-  -webkit-clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-          clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-  -webkit-animation: shadow-on-the-floor 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-          animation: shadow-on-the-floor 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-}
-
-.circle .ground {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 56px;
-  background: #F0DE75;
-  -webkit-animation: fading-sand 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-          animation: fading-sand 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
-}
-
-@-webkit-keyframes sun-goes-down {
-  0% {
-    background: #F57209;
-    -webkit-transform: rotate(-70deg);
-            transform: rotate(-70deg);
-  }
-  30% {
-    background: #FFEF00;
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  70% {
-    background: #FFEF00;
-  }
-  100% {
-    background: #F57209;
-    -webkit-transform: rotate(70deg);
-            transform: rotate(70deg);
-  }
-}
-
-@keyframes sun-goes-down {
-  0% {
-    background: #F57209;
-    -webkit-transform: rotate(-70deg);
-            transform: rotate(-70deg);
-  }
-  30% {
-    background: #FFEF00;
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  70% {
-    background: #FFEF00;
-  }
-  100% {
-    background: #F57209;
-    -webkit-transform: rotate(70deg);
-            transform: rotate(70deg);
-  }
-}
-
-@-webkit-keyframes sky-turns-black {
-  0% {
-    background: #272C34;
-  }
-  30% {
-    background: #7DDFFC;
-  }
-  70% {
-    background: #7DDFFC;
-  }
-  100% {
-    background: #272C34;
-  }
-}
-
-@keyframes sky-turns-black {
-  0% {
-    background: #272C34;
-  }
-  30% {
-    background: #7DDFFC;
-  }
-  70% {
-    background: #7DDFFC;
-  }
-  100% {
-    background: #272C34;
-  }
-}
-
-@-webkit-keyframes pyramide-shading {
-  0% {
-    background: #272C34;
-  }
-  30% {
-    background: #F4F4F4;
-  }
-  70% {
-    background: #DDDADA;
-  }
-  100% {
-    background: #272C34;
-  }
-}
-
-@keyframes pyramide-shading {
-  0% {
-    background: #272C34;
-  }
-  30% {
-    background: #F4F4F4;
-  }
-  70% {
-    background: #DDDADA;
-  }
-  100% {
-    background: #272C34;
-  }
+  -webkit-clip-path: polygon(37px 0%, 225px 0%, 100% 100%);
+          clip-path: polygon(37px 0%, 225px 0%, 100% 100%);
+  -webkit-animation: shadow-on-the-floor 6s linear infinite;
+          animation: shadow-on-the-floor 6s linear infinite;
 }
 
 @-webkit-keyframes shadow-on-the-floor {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
-  }
-  30% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-  }
-  55% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  75% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-clip-path: polygon(37px 0%, 225px 0%, 120% 100%);
+            clip-path: polygon(37px 0%, 225px 0%, 120% 100%);
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+    -webkit-clip-path: polygon(37px 0%, 225px 0%, -120% 0%);
+            clip-path: polygon(37px 0%, 225px 0%, -120% 0%);
   }
 }
 
 @keyframes shadow-on-the-floor {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
-  }
-  30% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
-  }
-  55% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  75% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-clip-path: polygon(37px 0%, 225px 0%, 120% 100%);
+            clip-path: polygon(37px 0%, 225px 0%, 120% 100%);
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
-            clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+    -webkit-clip-path: polygon(37px 0%, 225px 0%, -120% 0%);
+            clip-path: polygon(37px 0%, 225px 0%, -120% 0%);
   }
 }
 
-@-webkit-keyframes fading-sand {
+.sun {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  -webkit-animation: sun-circle 6s linear infinite;
+          animation: sun-circle 6s linear infinite;
+}
+
+@-webkit-keyframes sun-circle {
   0% {
-    background: #272C34;
-  }
-  30% {
-    background: #F0DE75;
-  }
-  70% {
-    background: #F0DE75;
+    -webkit-transform: rotate(0deg) translate(-100px) rotate(0deg);
+            transform: rotate(0deg) translate(-100px) rotate(0deg);
   }
   100% {
-    background: #272C34;
+    -webkit-transform: rotate(360deg) translate(-100px) rotate(360deg);
+            transform: rotate(360deg) translate(-100px) rotate(360deg);
   }
 }
 
-@keyframes fading-sand {
+@keyframes sun-circle {
   0% {
-    background: #272C34;
-  }
-  30% {
-    background: #F0DE75;
-  }
-  70% {
-    background: #F0DE75;
+    -webkit-transform: rotate(0deg) translate(-100px) rotate(0deg);
+            transform: rotate(0deg) translate(-100px) rotate(0deg);
   }
   100% {
-    background: #272C34;
+    -webkit-transform: rotate(360deg) translate(-100px) rotate(360deg);
+            transform: rotate(360deg) translate(-100px) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moon-circle {
+  0% {
+    -webkit-transform: rotate(0deg) translate(100px);
+            transform: rotate(0deg) translate(100px);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(100px);
+            transform: rotate(360deg) translate(100px);
+  }
+}
+
+@keyframes moon-circle {
+  0% {
+    -webkit-transform: rotate(0deg) translate(100px);
+            transform: rotate(0deg) translate(100px);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate(100px);
+            transform: rotate(360deg) translate(100px);
+  }
+}
+
+.moon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  -webkit-animation: moon-circle 6s linear infinite;
+          animation: moon-circle 6s linear infinite;
+  background-color: transparent;
+  -webkit-box-shadow: 1px 5px 0px 0px #fff;
+          box-shadow: 1px 5px 0px 0px #fff;
+}
+
+.stars {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: transparent;
+}
+
+.stars .star:nth-of-type(0) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 21px;
+  left: 148px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(1) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 153px;
+  left: 119px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(2) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 99px;
+  left: 120px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(3) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 209px;
+  left: 23px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(4) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 265px;
+  left: 43px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(5) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 278px;
+  left: 275px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(6) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 157px;
+  left: 208px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(7) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 286px;
+  left: 289px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(8) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 80px;
+  left: 176px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(9) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 158px;
+  left: 287px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(10) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 131px;
+  left: 236px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(11) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 222px;
+  left: 261px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(12) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 225px;
+  left: 161px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(13) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 90px;
+  left: 106px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(14) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 204px;
+  left: 240px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(15) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 256px;
+  left: 194px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(16) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 78px;
+  left: 3px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(17) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 238px;
+  left: 57px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(18) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 183px;
+  left: 196px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(19) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 74px;
+  left: 224px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(20) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 114px;
+  left: 243px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(21) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 71px;
+  left: 84px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(22) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 245px;
+  left: 52px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(23) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 55px;
+  left: 251px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(24) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 266px;
+  left: 23px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(25) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 139px;
+  left: 174px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(26) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 116px;
+  left: 100px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(27) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 283px;
+  left: 10px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(28) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  left: 169px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(29) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 191px;
+  left: 84px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(30) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 70px;
+  left: 23px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(31) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 251px;
+  left: 129px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(32) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 252px;
+  left: 213px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(33) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 274px;
+  left: 209px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(34) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 61px;
+  left: 147px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(35) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 113px;
+  left: 116px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(36) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 122px;
+  left: 234px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(37) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 117px;
+  left: 218px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(38) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 263px;
+  left: 201px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(39) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 45px;
+  left: 256px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(40) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 69px;
+  left: 120px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(41) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 42px;
+  left: 158px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(42) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 204px;
+  left: 134px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(43) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 29px;
+  left: 241px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(44) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 234px;
+  left: 300px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(45) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(46) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 272px;
+  left: 229px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(47) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 258px;
+  left: 55px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(48) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 116px;
+  left: 133px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(49) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 87px;
+  left: 139px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(50) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 115px;
+  left: 233px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(51) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 64px;
+  left: 59px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(52) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 270px;
+  left: 93px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(53) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 278px;
+  left: 71px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(54) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 167px;
+  left: 241px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(55) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 118px;
+  left: 296px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(56) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 227px;
+  left: 141px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(57) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 114px;
+  left: 111px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(58) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 300px;
+  left: 87px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(59) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 218px;
+  left: 94px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(60) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 12px;
+  left: 175px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(61) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 208px;
+  left: 223px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(62) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 164px;
+  left: 41px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(63) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  left: 189px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(64) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 22px;
+  left: 251px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(65) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 71px;
+  left: 63px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(66) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 42px;
+  left: 233px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(67) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 151px;
+  left: 197px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(68) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 2px;
+  left: 224px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(69) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 42px;
+  left: 89px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(70) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 202px;
+  left: 149px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(71) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 130px;
+  left: 29px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(72) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 144px;
+  left: 208px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(73) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 224px;
+  left: 264px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(74) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 264px;
+  left: 275px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(75) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 12px;
+  left: 268px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(76) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 271px;
+  left: 32px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(77) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 95px;
+  left: 105px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(78) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 70px;
+  left: 124px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(79) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 266px;
+  left: 32px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(80) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 96px;
+  left: 102px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(81) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 53px;
+  left: 79px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(82) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 118px;
+  left: 284px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(83) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 88px;
+  left: 20px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(84) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 79px;
+  left: 93px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(85) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 188px;
+  left: 177px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(86) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 63px;
+  left: 35px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(87) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 177px;
+  left: 253px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(88) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 163px;
+  left: 93px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(89) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 248px;
+  left: 246px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(90) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 231px;
+  left: 158px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(91) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 230px;
+  left: 210px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(92) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 286px;
+  left: 236px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(93) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 55px;
+  left: 211px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(94) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 168px;
+  left: 129px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(95) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 203px;
+  left: 274px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(96) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 19px;
+  left: 237px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(97) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 96px;
+  left: 96px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(98) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 117px;
+  left: 227px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(99) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 194px;
+  left: 132px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(100) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 70px;
+  left: 223px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(101) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 165px;
+  left: 135px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(102) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 209px;
+  left: 278px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(103) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 218px;
+  left: 268px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(104) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 174px;
+  left: 34px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(105) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 284px;
+  left: 115px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(106) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 97px;
+  left: 29px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(107) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 231px;
+  left: 290px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(108) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 18px;
+  left: 136px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(109) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 242px;
+  left: 222px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(110) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 8px;
+  left: 294px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(111) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 188px;
+  left: 236px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(112) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 222px;
+  left: 132px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(113) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 269px;
+  left: 171px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(114) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 41px;
+  left: 274px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(115) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 139px;
+  left: 247px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(116) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 103px;
+  left: 78px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(117) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 235px;
+  left: 73px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(118) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 265px;
+  left: 256px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(119) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 79px;
+  left: 24px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(120) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 58px;
+  left: 260px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(121) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 138px;
+  left: 207px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(122) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 112px;
+  left: 134px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(123) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 141px;
+  left: 54px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(124) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 3px;
+  left: 174px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(125) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 251px;
+  left: 300px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(126) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 286px;
+  left: 94px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(127) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 135px;
+  left: 116px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(128) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 238px;
+  left: 280px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+.stars .star:nth-of-type(129) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 251px;
+  left: 120px;
+  background: white;
+  -webkit-animation: starFade 6s linear 3s infinite;
+          animation: starFade 6s linear 3s infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes starFade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes starFade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ground {
+  position: absolute;
+  z-index: 12;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: #ecd556;
+  animation: ground-colour 6s linear infinite reverse;
+}
+
+@-webkit-keyframes ground-colour {
+  0% {
+    background: #423f0c;
+  }
+  50% {
+    background: #ecd556;
+  }
+  100% {
+    background: #2c2a08;
+  }
+}
+
+@keyframes ground-colour {
+  0% {
+    background: #423f0c;
+  }
+  50% {
+    background: #ecd556;
+  }
+  100% {
+    background: #2c2a08;
   }
 }
 /*# sourceMappingURL=main.css.map */
