@@ -1,0 +1,31 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+}
+
+.top {
+  width: 100%;
+  position: absolute;
+  height: 240px;
+  background: radial-gradient(circle, bisque 0%, #ffb66e 100%, #00d4ff 100%);
+}
+
+.bottom {
+  width: 100%;
+  position: absolute;
+  height: 160px;
+  background-color: #181717;
+  top: 240px;
+}
+/*# sourceMappingURL=main.css.map */
