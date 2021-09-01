@@ -39,6 +39,7 @@
   height: 245px;
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
+  border: 1px solid black;
 }
 
 .shoe {
