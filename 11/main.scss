@@ -1,5 +1,4 @@
-
-.frame {
+.cerceve {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8,152 +7,133 @@
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	background: rgb(246,232,215); 
+	background: radial-gradient(ellipse at center,  rgb(172, 210, 253) 0%,rgb(123, 160, 241) 100%); 
   overflow: hidden;
-  background: #fff;
-  color: #333;
-}
-.top{
-  width: 100%;
-  position:absolute;
-  height: 240px;
-  background:radial-gradient(circle, rgb(243, 216, 183) 0%, rgb(255,182,110) 100%);
-}
-.bottom{
-  width: 100%;
-  position:absolute;
-  height: 160px;
-  background-color: rgb(24, 23, 23);
-  top: 240px;
-}
-
-.invisible-men {
-	animation: fade-in .8s ease-out 1s;
+  animation: fade-in .8s ease-out 1s;
 	animation-fill-mode: both;
 }
 
-.ayakkabi1{
+.yer {
+	position: absolute;
+	top: 170px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #6d2f0b;
+}
+
+.kaldirim{
+  width: 1200px;
+  height: 30px;
   position: absolute;
-  width: 120px;
-  height: 40px;
-  background-color: rgb(121, 72, 16);
-  z-index: 20;
-  border-radius: 25%   ;
-  top: 190px;
-  left :60px;
-  border-bottom: 10px solid black;
-  border-right: 5px  solid black ;
-  animation: leg1-swing 2s linear infinite;
- 
-}
+  background-color: bisque;
+  top: 140px;
+  animation: kaldirim-ani 8s linear  infinite;
 
-
-
-
-.ayakkabi2{
-  position: absolute;
-  width: 120px;
-  height: 40px;
-  background-color: rgb(121, 72, 16);
-  z-index: 20;
-  border-radius: 25%   ;
-  top: 190px;
-  left :210px;
-  border-bottom: 10px solid black;
-  border-right: 5px  solid black ;
-  animation: leg2-swing 2s linear 1s infinite;
-  display: none;
-   
-}
-
-@keyframes leg1-swing {
-
-  0% {
-    top:190px;  left:60px;
-  }
-
-  25% {
-    top:120px; left:120px;
- }
-
-
-  50% {
-     top:190px; left:100px;
-  }
-
-  75% {
-    top:190px; left:90px;
- }
-
-
-  100% {
-    top:190px; left:60px;
- }
-
-
-}
-
-@keyframes leg2-swing {
-
-  0% {
-    top:190px;  left:210px;
-  }
-
-  25% {
-    top:140px; left:240px;
- }
-
-
-  50% {
-     top:190px; left:270px;
-  }
-
-  75% {
-    top:140px; left:240px;
- }
-
-
-  100% {
-    top:190px; left:210px;
- }
-
-
-}
-
-
-
-
-
-  .bacak{
-    position: absolute;
-    width: 50px;
-    height: 100px;
+  .kaldirimTas{
+    height: 30px;
+    width: 100px;
     background-color: bisque;
-    top:-90px;
-    border-radius: 10px 10px 20% 10% ;
-    z-index: 25;
-    border-bottom: 10px solid black;
+    border: 2px solid #232323;
+    float: left;
+    box-sizing: border-box;
   }
-  .bagcik{
-    position: absolute;
-    width: 10px;
-    height: 20px; 
-    top:5px; 
-    border-right:  2px  solid white;
-    border-left: 2px  solid white;
-    left:60px;
-    z-index: 27; 
-  }
-  .bagcik2{
-    position: absolute;
-    width: 10px;
-    height: 20px; 
-    top:5px; 
-    border-right:  2px  solid white;
-    border-left: 2px  solid white;
-    left:83px;
-    z-index: 27; 
-  }
+}
 
+.bacakCevre {
+	position: absolute;
+	top: 1px;
+	left: 100px;
+	width: 151px;
+	height: 165px;
+}
 
+.ayakkabi{
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(121, 16, 51);
+  z-index: 20;
+  border-radius: 25%   ;
+  top: 120px;
+  left :20px;
+  border-bottom: 10px solid black;
+  border-right: 5px  solid black ;
+}
 
+.bacak{
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  background-color: rgb(61, 80, 165);
+  top:-140px;
+  border-radius: 10px 10px 20px 1px ;
+  z-index: 25;
+  border-bottom: 10px solid black;
+}
+.bagcik{
+  position: absolute;
+  width: 10px;
+  height: 10px; 
+  top:0; 
+  border-right:  2px  solid white;
+  border-left: 2px  solid white;
+  left:60px;
+  z-index: 27; 
+}
+.bagcik2{
+  position: absolute;
+  width: 10px;
+  height: 10px; 
+  top:0; 
+  border-right:  2px  solid white;
+  border-left: 2px  solid white;
+  left:83px;
+  z-index: 27; 
+}
+
+.sol {
+	.ayakkabi {
+		animation: ayakkabi-ani 2s linear infinite;
+	}
+}
+.sag {
+	.ayakkabi {
+		animation: ayakkabi-ani 2s linear 1s infinite;
+	}
+}
+
+@keyframes ayakkabi-ani {
+	0%, 100% {
+		transform: translateY(-50px)  translateX(-50px) rotate(20deg);
+	}
+	25% {
+		transform:  translateY(0)  translateX(100px)  ;
+	}
+	50% {
+		transform:  translateY(0) translateX(50px) ;
+	}
+	75% {
+		transform:  translateY(0) translateX(0) ;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes kaldirim-ani {
+	0% {
+		left:0; 
+	}
+	100% {
+		left:-800px;
+	}
+}
