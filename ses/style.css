@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: inherit;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1, p {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  div {
+    height: 100px;
+    overflow: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.2);
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  .hints span {
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+  }
+.renk_kutu{
+    padding: 5px; 
+    border: 1px solid #ddd;
+    margin: 2px;
+}
+
+  .mavi{
+      background-color: blue;
+      color: aliceblue;
+  }
+
+.siyah{
+    background-color: black;
+    color: aliceblue;
+}
+.kırmızı{
+    background-color: red;
+    color: aliceblue;
+}
+.sarı{
+    background-color: yellow;
+    color: black;
+}
+.yeşil{
+    background-color: green;
+    color: black;
+}
+.mor{
+    background-color: purple;
+    color: black;
+}
+.pembe{
+    background-color: pink;
+    color: black;
+}
+
+
+
