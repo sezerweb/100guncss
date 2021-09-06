@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&display=swap');
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #3da6ad;
+  color: #333;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 18px;
+  p{
+    font-size: 25px;
+    text-align: left;
+    color: aliceblue;
+    line-height: 35px;
+    z-index: 20;
+    position: absolute;
+    letter-spacing: 2px;
+
+  }
+  em{
+    font-size: 20px;
+    text-align: left;
+    color: aliceblue;
+    bottom: 20px;
+    position: absolute;
+  }
+  span{
+    background-color: #263F41;
+    padding: 4px;
+    cursor: pointer;
+  }
+
+ 
+  
+}
+.center:before{
+  content: ',,';
+  position: absolute;
+  font-size: 240px;
+  top: -170px;
+  left: -15px; 
+  color: #BFEBEF;
+  z-index: 1;
+  letter-spacing: -15px;
+  opacity: 0.3;
+}
+#popover{
+  background-color: #263F41;
+  position: absolute;
+  color: aliceblue;
+  line-height: 20px;
+  width: 60%;
+  padding: 10px;
+  top: 60px;
+  left:90px;
+  opacity: 0.9;
+  box-sizing: border-box;
+  display: none;
+  transition: all 500ms ease-in-out;
+  
+}
+#popover:after{
+  content: '';
+  top: 90px;
+  left: 105px;
+  background-color: transparent;
+  position: absolute;
+  border-color: #263F41 transparent transparent transparent;
+  opacity: 0.9;
+  border-width: 15px;
+  border-style: solid;
+}
+#popover p:nth-child(1){
+  background-color: aliceblue;
+  color: #263F41 ;
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  left: 0;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
