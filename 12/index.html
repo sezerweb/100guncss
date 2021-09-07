@@ -11,27 +11,24 @@
       media="screen"
       href="../normalize.css"
     />
+    
     <script src='main.js'></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
     <div class="frame">
       <div class="center">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis
-          ex, commodo id malesuada <span id="pop" onmouseover="showPopover()" onmouseout="hidePopover()">aliquet</span>, efficitur a est. Quisque consequat
+        <p class="mainText">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Etiam felis
+          ex, commodo id malesuada <span id="pop">aliquot<span id="popover">
+                <span id="popoverHeader" ><span id="speakerIcon" onclick="speech('aliquot')">&#128264;</span>aliquot [ˈaləˌkwät]</span>
+                <span id="popoverText">Maecenas dapibus pharetra felis, eu auctor nunc. Vivamus id quam nisl.</span>
+            </span></span> efficitur est. Quisque consequatmon
           convallis metus non congue. Pellentesque habitant morbi. 
         </p>
-        <em>Maecenas Libero</em>
-       
+        <p class="authorName">- Maecenas Libero -</p>
+        <p class="authortitle">Consectetur Adipiscing Malesuada</p>
       </div>
-      <div id="popover">
-          <p>aliquet</p>
-        <p>Maecenas dapibus pharetra felis, eu auctor nunc. Vivamus id quam nisl.</p>
     </div>
-
-    
-    </div>
-
   </body>
 </html>

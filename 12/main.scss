@@ -24,76 +24,147 @@
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 18px;
-  p{
+
+  .mainText{
     font-size: 25px;
     text-align: left;
     color: aliceblue;
     line-height: 35px;
-    z-index: 20;
+    z-index: 2;
     position: absolute;
     letter-spacing: 2px;
+    font-style: italic;
 
   }
-  em{
+  .authorName{
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     color: aliceblue;
-    bottom: 20px;
+    width: 320px;
+    bottom: 10px;
+    position: absolute;
+    
+  }
+  .authortitle{
+    font-size: 15px;
+    text-align: center;
+    color: aliceblue;
+    width: 320px;
+    bottom: -10px;
     position: absolute;
   }
-  span{
+  #pop{
     background-color: #263F41;
     padding: 4px;
     cursor: pointer;
-  }
+    opacity: 0.9;
 
+    #popover{
+      background-color: #263F41;
+      position: absolute;
+      color: aliceblue;
+      line-height: 20px;
+      width: 250px;
+      height: 110px;
+      top: -25px;
+      left:50px;
+      box-sizing: border-box;
+      display: block;
+      visibility: hidden;
+			opacity: 0;
+			transform: translate3d(0,-25px,0);
+			transition: all .5s ease-out;
+      box-shadow: 4px 4px 4px 0 rgba(0 ,0, 0, 0.3);
+
+      #popoverHeader{
+        background-color: #BFEBEF;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        box-sizing: border-box;
+        padding: 5px;
+        color: #263F41;
+        font-style:normal;
+        text-indent: 28px;
+        #speakerIcon{
+          box-sizing: border-box;
+          font-size: 15px;
+          margin-right: 10px;
+          position: absolute;
+          left:-22px;
+          &:hover {
+            border-style:inset;
+            border-color: transparent #263F41  transparent transparent;
+            border-width: 5px;
+            border-radius: 40%;
+            left:-27px;
+            top: 0;
+					}
+        }
+       
+      }
+
+      #popoverText{
+        width: 100%;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        font-size: 15px;
+        box-sizing: border-box;
+        padding: 10px 10px 0 10px;
+        color: #BFEBEF;
+        cursor: text;
+        font-style:normal;
+      }
+      
+    }
+    #popover:after{
+      content: '';
+      top: 110px;
+      left: 105px;
+      background-color: transparent;
+      position: absolute;
+      border-color: #263F41 transparent transparent transparent;
+      border-width: 10px;
+      border-style: solid;
+    }
+
+  }
+  #pop:hover #popover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+  
+  &:before{
+    content: ',,';
+    display: block;
+    position: absolute;
+    font-size: 240px;
+    top: 0;
+    left: 0; 
+    color: #BFEBEF;
+    z-index: 1;
+    letter-spacing: -15px;
+    opacity: 0.3;
+    transform: rotateZ(180deg);
+  
+  }
+  &:after{
+    content: ',,';
+    display: block;
+    position: absolute;
+    font-size: 240px;
+    top: 55px;
+    right: -5px; 
+    color: #BFEBEF;
+    z-index: 1;
+    letter-spacing: -15px;
+    opacity: 0.3;
+  }
+  
  
   
-}
-.center:before{
-  content: ',,';
-  position: absolute;
-  font-size: 240px;
-  top: -170px;
-  left: -15px; 
-  color: #BFEBEF;
-  z-index: 1;
-  letter-spacing: -15px;
-  opacity: 0.3;
-}
-#popover{
-  background-color: #263F41;
-  position: absolute;
-  color: aliceblue;
-  line-height: 20px;
-  width: 60%;
-  padding: 10px;
-  top: 60px;
-  left:90px;
-  opacity: 0.9;
-  box-sizing: border-box;
-  display: none;
-  transition: all 500ms ease-in-out;
-  
-}
-#popover:after{
-  content: '';
-  top: 90px;
-  left: 105px;
-  background-color: transparent;
-  position: absolute;
-  border-color: #263F41 transparent transparent transparent;
-  opacity: 0.9;
-  border-width: 15px;
-  border-style: solid;
-}
-#popover p:nth-child(1){
-  background-color: aliceblue;
-  color: #263F41 ;
-  position: absolute;
-  width: 100%;
-  top: -16px;
-  left: 0;
-  box-sizing: border-box;
-  padding-left: 10px;
 }
