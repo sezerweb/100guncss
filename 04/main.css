@@ -9,8 +9,7 @@
   border-radius: 2px;
   -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background: white;
-  background: radial-gradient(circle, white 14%, #e56262 53%);
+  background: radial-gradient(circle, white 4%, #e56262 73%);
   color: #fff;
 }
 
@@ -18,8 +17,10 @@
   position: absolute;
   width: 220px;
   height: 220px;
-  top: 90px;
-  left: 90px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .dot-1 {

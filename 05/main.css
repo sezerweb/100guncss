@@ -12,9 +12,6 @@
           box-shadow: 1px px 10px 0px rgba(0, 0, 0, 0.3);
   background: #19b9ce;
   font-family: "Open Sans", Helvetica, sans-serif;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .card {
@@ -24,11 +21,10 @@
   height: 220px;
   width: 280px;
   background: #fff;
-  border-radius: 8px;
-  -webkit-box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  border: 1px solid #19b9ce;
 }
 
 .card .header {
@@ -39,43 +35,45 @@
   color: #fff;
 }
 
-.card .title {
+.card .header .title {
   top: 12px;
   left: 15px;
 }
 
-.card .big {
+.card .header .big {
   position: absolute;
   font-weight: 600;
   font-size: 14px;
-  text-transform: uppercase;
 }
 
-.card .date {
+.card .header .date {
   top: 30px;
   left: 15px;
 }
 
-.card .small {
+.card .header .small {
   position: absolute;
   font-weight: 400;
   font-size: 11px;
 }
 
-.card .type {
+.card .header .type {
   top: 14px;
   right: 15px;
 }
 
-.card .value {
+.card .header .value {
   top: 28px;
   right: 15px;
 }
 
 .clearfix::after {
-  content: "";
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
   clear: both;
-  display: table;
+  height: 0;
 }
 
 .parameter {

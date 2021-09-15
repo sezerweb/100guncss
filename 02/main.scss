@@ -7,12 +7,10 @@
   height: 400px;
   margin-top: -200px;
   margin-left: -200px;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #81004f;
-  color: #fff;
-  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 .center {
@@ -61,13 +59,13 @@
   }
   &:hover {
     .line-1 {
-      background-color: #fff;
+      background-color: #FFC7EF;
     }
     .line-2 {
-      background-color: #fff;
+      background-color: #FFC7EF;
     }
     .line-3 {
-      background-color: #fff;
+      background-color: #FFC7EF;
     }
   }
 }
@@ -85,6 +83,16 @@
     animation: animate-line-3 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
   }
 }
+
+.menu-icon.active:hover {
+  .line-1 {
+    background-color: #FFC7EF;
+  }
+  .line-3 {
+    background-color: #FFC7EF;
+  }
+}
+
 
 @keyframes animate-line-1 {
   0% {
@@ -107,11 +115,11 @@
 
 @keyframes animate-line-2 {
   0% {
-    transform: scale(1);
+    transform: scale(1,1);
     opacity: 1;
   }
   100% {
-    transform: scale(0);
+    transform: scale(0,0);
     opacity: 0;
   }
 }

@@ -15,9 +15,7 @@ $blue: #d174e4;
   box-shadow: 1px px 10px 0px rgba(0, 0, 0, 0.3);
   background: #19b9ce;
   font-family: "Open Sans", Helvetica, sans-serif;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 
 .card {
@@ -27,10 +25,9 @@ $blue: #d174e4;
   height: 220px;
   width: 280px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  border: 1px solid #19b9ce;
 
   .header {
     position: relative;
@@ -38,45 +35,50 @@ $blue: #d174e4;
     width: 100%;
     background-color: #ee6516;
     color: #fff;
+
+    .title {
+      top: 12px;
+      left: 15px;
+    }
+  
+    .big {
+      position: absolute;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  
+    .date {
+      top: 30px;
+      left: 15px;
+    }
+  
+    .small {
+      position: absolute;
+      font-weight: 400;
+      font-size: 11px;
+    }
+  
+    .type {
+      top: 14px;
+      right: 15px;
+    }
+  
+    .value {
+      top: 28px;
+      right: 15px;
+    }
+
   }
 
-  .title {
-    top: 12px;
-    left: 15px;
-  }
-
-  .big {
-    position: absolute;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-
-  .date {
-    top: 30px;
-    left: 15px;
-  }
-
-  .small {
-    position: absolute;
-    font-weight: 400;
-    font-size: 11px;
-  }
-
-  .type {
-    top: 14px;
-    right: 15px;
-  }
-
-  .value {
-    top: 28px;
-    right: 15px;
-  }
+ 
 }
 .clearfix::after {
-  content: "";
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
   clear: both;
-  display: table;
+  height: 0;
 }
 
 .parameter {

@@ -26,34 +26,27 @@
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-  left: 94px;
+  left: 93px;
   margin-top: 5px;
 }
 
 
 .buyuk {
   position: relative;
-  z-index: 20;
-  display: block;
   font-size: 97px;
   line-height: 83px;
-  text-transform: uppercase;
   font-weight: 700;
-  margin-top: 0;
   letter-spacing: -3px;
   margin-left: -4px;
 }
 
 .kucuk {
   position: relative;
-  z-index: 20;
-  display: block;
   font-size: 22px;
-  line-height: 20px;
-  text-transform: uppercase;
+  line-height: 22px;
   font-weight: 700;
   letter-spacing: 1.9px;
-  text-indent: 4px;
+  margin-left:4px;
 }
 
 .goz1 {
@@ -63,7 +56,6 @@
   background-color: #fff;
   border-radius: 50%;
   margin: 37px 66px;
-  z-index: 50;
 }
 
 .goz2 {
@@ -73,7 +65,6 @@
   background-color: #fff;
   border-radius: 50%;
   margin: 37px 148px;
-  z-index: 50;
 }
 
 .numara {
@@ -98,7 +89,7 @@
     z-index: 10;
     top: 0;
     left: 11px;
-    height: 100px;
+    height: 99px;
     width: 24px;
     background: #fff;
     border-radius: 3px;
