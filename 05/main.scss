@@ -5,12 +5,10 @@ $blue: #d174e4;
 
 .frame {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
   border-radius: 2px;
   box-shadow: 1px px 10px 0px rgba(0, 0, 0, 0.3);
   background: #19b9ce;
@@ -20,8 +18,9 @@ $blue: #d174e4;
 
 .card {
   position: absolute;
-  top: 90px;
-  left: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 220px;
   width: 280px;
   background: #fff;
