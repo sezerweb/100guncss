@@ -1,5 +1,5 @@
 
-.frame {
+.video_area {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,16 +7,16 @@
   height: 400px;
   margin-top: -200px;
   margin-left: -200px;
-  border-radius: 2px;
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #fff;
+  background: #f70000;
   color: #333;
 }
 
-.center {
+video {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
 }

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #d6d58e;
+  font-family: 'Roboto';
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: #042940;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 10px #005c53, 15px 15px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 10px #005c53, 15px 15px 10px rgba(0, 0, 0, 0.5);
+  color: #9fc131;
+}
+
+.container .hundred {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .hundred .one {
+  width: 30px;
+  height: 10px;
+  background-color: #dbf227;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 7px 10px 0 0;
+  border: 5px solid #dbf227;
+  border-radius: 10px;
+}
+
+.container .hundred .one::after {
+  content: "";
+  width: 3px;
+  height: 70px;
+  background-color: #dbf227;
+  position: absolute;
+  left: -10px;
+  top: -14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 5px solid #dbf227;
+  border-radius: 10px;
+}
+
+.container .hundred .zeroOne,
+.container .hundred .zeroTwo {
+  width: 40px;
+  height: 80px;
+  border: 10px solid #dbf227;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.container .days {
+  font-size: 44px;
+  letter-spacing: 2px;
+  text-indent: 4px;
+}
+
+.container .cssChalange {
+  font-size: 15px;
+}
+/*# sourceMappingURL=style.css.map */
