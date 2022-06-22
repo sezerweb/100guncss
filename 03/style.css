@@ -1,0 +1,183 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #F6FBF4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.frame {
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  overflow: hidden;
+  background: #191919;
+  color: #4B8673;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center {
+  width: 200px;
+  height: 200px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #F0DE75), color-stop(35%, #05ADD7), color-stop(80%, #7DDFFC));
+  background: linear-gradient(0deg, #F0DE75 35%, #05ADD7 35% 50%, #7DDFFC 80%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sun {
+  width: 40px;
+  height: 40px;
+  background: #f4f807;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform-origin: 50% 450%;
+          transform-origin: 50% 450%;
+  -webkit-animation: sun-goes-down 5s linear infinite;
+          animation: sun-goes-down 5s linear infinite;
+  top: 17px;
+  left: 93px;
+}
+
+.pyramid1 {
+  position: absolute;
+  bottom: 70px;
+  left: 45px;
+  border: 60px solid #f4f4f4;
+  border-left: 60px solid transparent;
+  border-top: none;
+  border-right: 10px solid transparent;
+}
+
+.pyramid2 {
+  position: absolute;
+  bottom: 70px;
+  left: 105px;
+  border: 60px solid #cfcfcf;
+  border-right: 50px solid transparent;
+  border-top: none;
+  border-left: none;
+}
+
+.shadow {
+  position: absolute;
+  top: 130px;
+  left: 45px;
+  width: 158px;
+  height: 100px;
+  background-color: #b9a220;
+  -webkit-clip-path: polygon(210% 7%, 0 0, 100% 0);
+          clip-path: polygon(210% 7%, 0 0, 100% 0);
+  -webkit-animation: shadow 5s linear infinite;
+          animation: shadow 5s linear infinite;
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-clip-path: polygon(70% 27%, 0 0, 70% 0);
+            clip-path: polygon(70% 27%, 0 0, 70% 0);
+  }
+  30% {
+    -webkit-clip-path: polygon(60% 37%, 0 0, 70% 0);
+            clip-path: polygon(60% 37%, 0 0, 70% 0);
+  }
+  70% {
+    -webkit-clip-path: polygon(20% 27%, 0 0, 70% 0);
+            clip-path: polygon(20% 27%, 0 0, 70% 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(-100% 10%, 0 0, 70% 0);
+            clip-path: polygon(-100% 10%, 0 0, 70% 0);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    -webkit-clip-path: polygon(70% 27%, 0 0, 70% 0);
+            clip-path: polygon(70% 27%, 0 0, 70% 0);
+  }
+  30% {
+    -webkit-clip-path: polygon(60% 37%, 0 0, 70% 0);
+            clip-path: polygon(60% 37%, 0 0, 70% 0);
+  }
+  70% {
+    -webkit-clip-path: polygon(20% 27%, 0 0, 70% 0);
+            clip-path: polygon(20% 27%, 0 0, 70% 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(-100% 10%, 0 0, 70% 0);
+            clip-path: polygon(-100% 10%, 0 0, 70% 0);
+  }
+}
+
+@-webkit-keyframes sun-goes-down {
+  0% {
+    background: #F57209;
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+  }
+  30% {
+    background: #FFEF00;
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  70% {
+    background: #FFEF00;
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  100% {
+    background: #F57209;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes sun-goes-down {
+  0% {
+    background: #F57209;
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+  }
+  30% {
+    background: #FFEF00;
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  70% {
+    background: #FFEF00;
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  100% {
+    background: #F57209;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

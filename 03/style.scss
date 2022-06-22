@@ -1,0 +1,92 @@
+@import "_base.scss";
+ 
+.center {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(0deg,#F0DE75 35%, #05ADD7 35% 50%, #7DDFFC 80%);
+  border-radius: 50%; 
+  overflow: hidden;
+  position: relative;
+}
+.sun{
+  width: 40px;
+  height: 40px;
+  background: rgb(244, 248, 7);
+  border-radius: 50%;
+  position: absolute;
+  transform-origin: 50% 450%;
+  animation: sun-goes-down 5s linear infinite;
+  top: 17px;
+  left: 93px; 
+
+}
+.pyramid1{  
+  position: absolute;
+  bottom:70px;
+  left:45px;
+  border:60px solid #f4f4f4;
+  border-left:60px solid transparent;
+  border-top:none;
+  border-right:10px solid transparent;
+}
+.pyramid2{  
+  position: absolute;
+  bottom:70px;
+  left:105px;
+  border:60px solid #cfcfcf;
+  border-right:50px solid transparent;
+  border-top:none;
+  border-left:none;
+}
+.shadow{  
+  position: absolute;
+  top:130px;
+  left:45px;
+  width: 158px;
+  height: 100px;
+  background-color: #b9a220;
+  clip-path: polygon(210% 7%, 0 0, 100% 0);
+  animation: shadow 5s linear infinite;
+}
+
+
+
+@keyframes shadow {
+  0% {
+    clip-path: polygon(70% 27%, 0 0, 70% 0);
+  }
+
+	30% {
+    clip-path: polygon(60% 37%, 0 0, 70% 0);
+	}
+	70% {
+    clip-path: polygon(20% 27%, 0 0, 70% 0);
+	}
+  100% {
+    clip-path: polygon(-100% 10%, 0 0, 70% 0);
+  }
+}
+
+
+
+@keyframes sun-goes-down {
+  0% {
+		background: #F57209;
+    transform: rotate(-55deg);
+  }
+	
+	30% {
+		background: #FFEF00;
+		transform: rotate(-18deg);
+	}
+	
+	70% {
+		background: #FFEF00;
+    transform: rotate(18deg);
+	}
+
+  100% {
+		background: #F57209;
+    transform: rotate(45deg);
+  }
+}
