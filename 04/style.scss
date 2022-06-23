@@ -1,0 +1,67 @@
+@import "_base.scss";
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-color: #E56262;
+}
+.circle1, .circle2, .circle3{
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+} 
+$box-shadow1:2px 2px 3px 2px rgba(0,0,0,0.2);
+$box-shadow2:10px 10px 15px 0 rgba(0,0,0,0.3);
+
+.circle1{
+  width: 30px;
+  height: 30px;
+  z-index: 3;
+  animation: circle1 2s infinite alternate ; 
+}
+
+.circle2{
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  animation: circle2 2s infinite alternate ;
+}
+
+.circle3{
+  width: 90px;
+  height: 90px;
+  z-index: 1;
+  animation: circle3 2s infinite alternate ;
+}
+@keyframes circle1 {
+  0%,70%{
+    box-shadow: $box-shadow1;
+    transform: scale(0);
+  }
+  100%{
+    box-shadow: $box-shadow2;
+    transform: scale(1);
+  }
+}
+@keyframes circle2 {
+  0%,40%{
+    box-shadow: $box-shadow1;
+    transform: scale(0);
+  }
+  100%{
+    box-shadow: $box-shadow2;
+    transform: scale(1);
+  }
+}
+@keyframes circle3 {
+  0%,10%{
+    box-shadow: $box-shadow1 ;
+    transform: scale(0);
+  }
+  100%{
+    box-shadow: $box-shadow2;
+    transform: scale(1);
+  }
+}
