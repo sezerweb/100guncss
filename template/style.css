@@ -39,6 +39,10 @@ body {
           justify-content: center;
 }
 
+.frame {
+  background: #fff;
+}
+
 .center {
   display: -webkit-box;
   display: -ms-flexbox;

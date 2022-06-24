@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>07</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="header">
+                <span class="menu-icon">IIII</span>
+                <h1 class="title">Notifications</h1>
+                <div class="search-area">
+                    <input type="text" placeholder="Search...">
+                </div>
+            <span class="search-icon" >[oo]</span>
+        </div>
+            <div class="notifications">
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">09:24</span>
+                    <span class="notification"><strong>Lorem  Ipsum</strong> dolor sit amet consectetur adipisicing elit. </span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">09:24</span>
+                    <span class="notification"><strong>Similique Aliquid</strong> exercitationem architecto possimus tempora. </span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">09:24</span>
+                    <span class="notification"><strong>Doloremque Quam</strong> corporis adipisci consequuntur eo.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const searchButton = document.querySelector(".search-icon");
+        searchButton.addEventListener('click', ()=>{
+            const title = document.querySelector(".title");
+            const searchArea = document.querySelector(".search-area");
+            title.classList.toggle("hidden")
+            searchArea.classList.toggle("show")
+        })
+
+    </script>
+</body>
+</html>
