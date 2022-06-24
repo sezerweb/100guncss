@@ -1,0 +1,168 @@
+@import "_base.scss";
+
+$profile-back-color: #fefae0;
+$shadow-color: #000;
+$shadow-alpha: 0.2;
+
+$image-circle-color: #d4a373;
+
+$button-color: #d4a373;
+$button-font-color: #fefae0;
+$button-hover-color: #faedcd;
+$button-hover-font-color: #d4a373;
+
+$stat-color: #faedcd;
+$stat-border-color: #fefae0;
+$counts-hover-back-color: #d4a373;
+$counts-hover-font-color: #fefae0;
+$counts-font-color: #d4a373;
+
+$frame-back-color1: #faedcd;
+$frame-back-color2: #d4a373;
+$g-font-color: #d4a373;
+
+.frame {
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba($shadow-color, $shadow-alpha);
+  overflow: hidden;
+  background: linear-gradient(
+    left bottom,
+    $frame-back-color2 0%,
+    $frame-back-color1 100%
+  );
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  width: 290px;
+  height: 261px;
+  box-shadow: 3px 6px 9px rgba($shadow-color, $shadow-alpha);
+  font-size: 0.9em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: $g-font-color;
+}
+
+.profile {
+  width: 200px;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 5px;
+  background-color: $profile-back-color;
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .circle1 {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid $image-circle-color;
+      border-right: 2px solid transparent;
+      position: absolute;
+      transition: all 2s ease-in-out;
+    }
+    .circle2 {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid $image-circle-color;
+      border-left: 2px solid transparent;
+      position: absolute;
+      transition: all 2s ease-in-out;
+    }
+    &:hover .circle1 {
+      transform: rotate(360deg);
+    }
+    &:hover .circle2 {
+      transform: rotate(-360deg);
+    }
+  }
+  span {
+    display: block;
+    margin: 2px;
+  }
+  .name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .title {
+    margin-top: -3px;
+  }
+
+  .button_area {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
+    button {
+      width: 50%;
+      padding: 7px 10px;
+      border-radius: 6px;
+      background-color: $button-color;
+      color: $button-font-color;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 0 5px rgba($shadow-color, $shadow-alpha);
+      background-color: $button-hover-color;
+      color: $button-hover-font-color;
+    }
+  }
+}
+.stats {
+  width: 90px;
+  height: 100%;
+  float: left;
+  background-color: $stat-color;
+
+  div:nth-child(2),
+  div:nth-child(1) {
+    border-bottom: 1px solid $stat-border-color;
+  }
+
+  .counts {
+    width: 100%;
+    height: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $counts-font-color;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    .count {
+      font-size: 1.4em;
+    }
+    .title {
+      font-size: 0.7em;
+    }
+
+    &:hover {
+      background-color: $counts-hover-back-color;
+      color: $counts-hover-font-color;
+    }
+  }
+}

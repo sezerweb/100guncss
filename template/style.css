@@ -26,9 +26,17 @@ body {
           box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
   overflow: hidden;
   background: #fff;
-  color: #4B8673;
   width: 400px;
   height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .center {
