@@ -9,15 +9,25 @@
 </head>
 <body>
     <div class="frame">
-        <div class="center">
+        <div class="menu-area">
+            <ul>
+                <li class="item">Dashboard</li>
+                <li class="item">Profile</li>
+                <li class="item">Notifications</li>
+                <li class="item">Messages</li>
+                <li class="item">Settings</li>
+            </ul>
+        </div>
+
+        <div class="widget">
             <div class="header">
                 <span class="menu-icon">IIII</span>
                 <h1 class="title">Notifications</h1>
                 <div class="search-area">
                     <input type="text" placeholder="Search...">
                 </div>
-            <span class="search-icon" >[oo]</span>
-        </div>
+                <span class="search-icon" >[oo]</span>
+            </div>
             <div class="notifications">
                 <div class="item">
                     <span class="circle"></span>
@@ -26,12 +36,27 @@
                 </div>
                 <div class="item">
                     <span class="circle"></span>
-                    <span class="time">09:24</span>
+                    <span class="time">07:21</span>
                     <span class="notification"><strong>Similique Aliquid</strong> exercitationem architecto possimus tempora. </span>
                 </div>
                 <div class="item">
                     <span class="circle"></span>
-                    <span class="time">09:24</span>
+                    <span class="time">07:02</span>
+                    <span class="notification"><strong>Doloremque Quam</strong> corporis adipisci consequuntur eo.</span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">06:54</span>
+                    <span class="notification"><strong>Lorem  Ipsum</strong> dolor sit amet consectetur adipisicing elit. </span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">01:11</span>
+                    <span class="notification"><strong>Similique Aliquid</strong> exercitationem architecto possimus tempora. </span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="time">00:59</span>
                     <span class="notification"><strong>Doloremque Quam</strong> corporis adipisci consequuntur eo.</span>
                 </div>
             </div>
@@ -43,9 +68,18 @@
         searchButton.addEventListener('click', ()=>{
             const title = document.querySelector(".title");
             const searchArea = document.querySelector(".search-area");
-            title.classList.toggle("hidden")
-            searchArea.classList.toggle("show")
+            title.classList.toggle("hidden-title")
+            searchArea.classList.toggle("show-search-input")
         })
+
+        const menuButton = document.querySelector(".menu-icon");
+        menuButton.addEventListener('click', ()=>{
+            const widget = document.querySelector(".widget");
+            const menuArea = document.querySelector(".menu-area");
+            widget.classList.toggle("slide-widget")
+            menuArea.classList.toggle("slide-menu")
+        })
+
 
     </script>
 </body>
