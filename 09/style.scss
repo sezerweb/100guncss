@@ -1,0 +1,190 @@
+@import "_base.scss";
+
+.sky {
+  width: 100%;
+  height: 320px;
+  background: #1a2238;
+  overflow: hidden;
+  position: relative;
+  .hills {
+    top: 220px;
+    left: 90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #33426e;
+    position: absolute;
+    box-shadow: 180px 20px 0 #33426e, -180px 30px 0 #33426e,
+      -160px -20px 0 #283557, 80px -20px 0 #283557;
+  }
+  @keyframes moon-ani {
+    0% {
+      transform: translate3d(0, 250px, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px #f9ffc2;
+    }
+  }
+
+  .moon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f9ffc2;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    box-shadow: 0 0 1px #f9ffc2;
+    overflow: hidden;
+    animation: moon-ani 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ece1a8;
+      box-shadow: 50px -10px 0 -2px #f1e9c2, 30px -30px 0 -4px #f1e9c2,
+        34px 20px 0 -5px #f1e9c2;
+    }
+  }
+}
+.info {
+  width: 100%;
+  height: 80px;
+  background-color: aliceblue;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  .heat {
+    flex: 1.5;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .infos,
+  .days {
+    flex: 2;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    span {
+      display: block;
+    }
+  }
+}
+@for $i from 1 through 10 {
+  .drop-big-#{$i} {
+    position: absolute;
+    z-index: 20;
+    left: (-20 + 38 * $i) + px;
+    bottom: 77px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #7fc1f9;
+    animation: drop
+      (0.7 + random(2) / 10) +
+      s
+      linear
+      (random(50) / 25) +
+      s
+      infinite;
+    animation-fill-mode: both;
+    transform-origin: center;
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -2px;
+      left: 1px;
+      width: 6px;
+      height: 6px;
+      background: #7fc1f9;
+      border-radius: 3px;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -5px;
+      left: 2px;
+      width: 4px;
+      height: 10px;
+      background: #7fc1f9;
+      border-radius: 50%;
+    }
+  }
+
+
+  .drop-medium-#{$i} {
+		@extend .drop-big-1;
+		left: (-20 + 38 * $i) + px;
+		opacity: 0.6;
+		width: 6px;
+		height: 6px;
+		animation: drop (1.3 + random(2) / 10) + s linear (random(50) / 25) + s infinite;
+		animation-fill-mode: both;
+		
+		&:before {
+			top: -2px;
+			left: 1px;
+			width: 4px;
+			height: 4px;
+		}
+		
+		&:after {
+			top: -4px;
+			left: 2px;
+			width: 2px;
+			height: 6px;
+		}
+		
+	}
+	
+	.drop-small-#{$i} {
+		@extend .drop-big-1;
+		left: (-20 + 38 * $i) + px;
+		opacity: 0.3;
+		width: 4px;
+		height: 4px;
+		animation: drop (1.9 + random(2) / 10) + s linear (random(50) / 25) + s infinite;
+		animation-fill-mode: both;
+		
+		&:before {
+			top: -2px;
+			left: 1px;
+			width: 2px;
+			height: 2px;
+		}
+		
+		&:after {
+			top: -3px;
+			left: 1px;
+			width: 2px;
+			height: 4px;
+		}
+		
+	}
+
+
+
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(40px, -330px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  85% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}

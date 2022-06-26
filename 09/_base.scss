@@ -1,0 +1,27 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #546DAF;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  overflow: hidden;
+  background: #fff; 
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  position: relative;
+}
