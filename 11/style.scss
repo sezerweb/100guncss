@@ -9,8 +9,8 @@
 	animation: leg-swing 2s ease-in-out 1s infinite;
   transform-origin: 0 50%;
   position: absolute;
-  top: 110px;
-	left: 100px;
+  top: 10px;
+	left: 80px;
 	width: 111px;
 	height: 55px;
  
@@ -19,8 +19,8 @@
 	animation: leg-swing 2s ease-in-out  infinite;
   transform-origin: 0 50%;
   position: absolute;
-	top: 110px;
-	left: 100px;
+	top: 10px;
+	left: 80px;
 	width: 80px;
 	height: 55px;
 }
@@ -35,7 +35,7 @@
   left: 0;
   border-radius: 15px 60px 10px 10px;
   border-bottom: 10px solid black; 
-  animation: shoe-turn1 2s linear infinite;
+  animation: shoe-turn1 2s ease-in-out infinite;
   
   
   &::after{
@@ -62,8 +62,16 @@
 
 .shoe-2{
   @extend .shoe-1 ; 
-  animation: shoe-turn1 2s linear 1s  infinite;
+  animation: shoe-turn1 2s ease-in-out 1s  infinite;
 
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 
@@ -73,19 +81,23 @@
 	} 
 
   50% {
-		transform: translateX(200px);
+		transform: translateX(120px);
 	} 
 
   100% {
-		transform: translateX6(100px);
+		transform: translateX6(60px);
 	} 
 }
 
 @keyframes leg-swing {
 	0%, 100% {
-		transform: rotate(-10deg);
+		transform: rotate(-12deg);
 	}
 	50% {
-		transform: rotate(10deg);
+		transform: rotate(12deg);
 	}
+}
+.invisible-men {
+	animation: fade-in .8s ease-out 1s;
+	animation-fill-mode: both;
 }
