@@ -15,9 +15,11 @@ body{
 .frame {
   border-radius: 4px;
   box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  overflow: hidden;
   background: #fff; 
   width: 400px;
-  height: 400px; 
-  position: relative;
-  color: #444;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
