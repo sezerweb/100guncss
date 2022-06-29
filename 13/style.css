@@ -21,7 +21,6 @@ body {
 }
 
 .frame {
-  border-radius: 4px;
   -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
           box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
   overflow: hidden;
@@ -37,22 +36,35 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .frame {
   background: #fff;
 }
 
-.center {
+.thumb {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.thumb img {
+  width: 100%;
+}
+
+.thumb:hover {
+  background-color: #316b6b;
 }
 /*# sourceMappingURL=style.css.map */

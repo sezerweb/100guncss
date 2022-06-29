@@ -3,9 +3,19 @@
   background: #fff; 
 }
 
-.center {
+.thumb {  
+  width: 200px;
+  height: 200px;
+  background-color: aqua; 
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100%; 
+  align-items: center;
+  cursor: pointer;
+  
+  img{  
+    width: 100%; 
+  }
+  &:hover{
+    background-color: rgb(49, 107, 107);
+  }
 }
