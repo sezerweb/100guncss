@@ -1,0 +1,77 @@
+@import "_base.scss";
+.frame {
+  background: rgb(147, 221, 250);
+}
+
+.center {
+  width: 320px;
+  height: 220px;
+  background-color: gold;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba($color: #000000, $alpha: 0.4);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .front {
+    width: 240px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .car {
+      font-size: 10em;
+      color: rgb(158, 14, 14);
+      //display: none;
+      text-align: center;
+      animation: car 0.1s linear infinite;
+      position: absolute;
+      bottom: -10px;
+    }
+    .road {
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: 112px;
+
+      @for $i from 1 through 7 {
+        .road-line-#{$i} {
+         
+          width: (2 + $i * 2) + px;
+          height: 3px;
+          border-radius: 3px;
+          background-color: rgb(158, 14, 14);
+          position: absolute;
+          animation: road (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+          left: 0;
+          filter: blur(.7px);
+        }
+      }
+    }
+  }
+
+  @keyframes road {
+    0% {
+      transform: translate3d(200px, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes car {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.015);
+    }
+  }
+
+  .back {
+    @extend .front;
+    display: none;
+  }
+}
