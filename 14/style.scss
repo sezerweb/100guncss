@@ -13,13 +13,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+	perspective: 800px;
+  &:hover .front{
+    transform: rotateX(180deg) translate3d(0,0,0); 
+  }
+
   .front {
-    width: 240px;
-    height: 140px;
+    width: 100%;
+		height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    transform-style: preserve-3d;
+		transition: all 1s ease-in-out;
+		perspective: 1000px;
+    transform: rotateX(0);
 
     .car {
       font-size: 10em;
