@@ -40,36 +40,41 @@ body {
 }
 
 .frame {
-  background: #93ddfa;
+  background: #82b3f3;
 }
 
-.center {
+.card {
   width: 320px;
-  height: 220px;
-  background-color: gold;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 180px;
+  top: 110px;
+  left: 40px;
   -webkit-perspective: 800px;
           perspective: 800px;
 }
 
-.center:hover .front, .center:hover .back {
+.card:hover .flip {
   -webkit-transform: rotateX(180deg) translate3d(0, 0, 0);
           transform: rotateX(180deg) translate3d(0, 0, 0);
+  -webkit-box-shadow: 8px -10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 8px -10px 15px 0 rgba(0, 0, 0, 0.3);
 }
 
-.center .front, .center .back {
+.card .flip {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  background-color: gold;
+  border-radius: 6px;
+}
+
+.front, .back {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -90,79 +95,32 @@ body {
           perspective: 1000px;
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-.center .front .car, .center .back .car {
+.front .car, .back .car {
   font-size: 10em;
   color: #9e0e0e;
   text-align: center;
   -webkit-animation: car 0.1s linear infinite;
           animation: car 0.1s linear infinite;
   position: absolute;
-  bottom: -10px;
+  bottom: 15px;
 }
 
-.center .front .road, .center .back .road {
+.front .road, .back .road {
   width: 100%;
   height: 20px;
-  position: absolute;
-  top: 112px;
+  top: 47px;
+  overflow: hidden;
+  left: 20px;
+  position: relative;
 }
 
-.center .front .road .road-line-1, .center .back .road .road-line-1 {
+.front .road .road-line-1, .back .road .road-line-1 {
   width: 4px;
-  height: 3px;
-  border-radius: 3px;
-  background-color: #9e0e0e;
-  position: absolute;
-  -webkit-animation: road 0.9s linear 0.2s infinite;
-          animation: road 0.9s linear 0.2s infinite;
-  left: 0;
-  -webkit-filter: blur(0.7px);
-          filter: blur(0.7px);
-}
-
-.center .front .road .road-line-2, .center .back .road .road-line-2 {
-  width: 6px;
-  height: 3px;
-  border-radius: 3px;
-  background-color: #9e0e0e;
-  position: absolute;
-  -webkit-animation: road 1s linear 0.1s infinite;
-          animation: road 1s linear 0.1s infinite;
-  left: 0;
-  -webkit-filter: blur(0.7px);
-          filter: blur(0.7px);
-}
-
-.center .front .road .road-line-3, .center .back .road .road-line-3 {
-  width: 8px;
-  height: 3px;
-  border-radius: 3px;
-  background-color: #9e0e0e;
-  position: absolute;
-  -webkit-animation: road 1s linear 0.3s infinite;
-          animation: road 1s linear 0.3s infinite;
-  left: 0;
-  -webkit-filter: blur(0.7px);
-          filter: blur(0.7px);
-}
-
-.center .front .road .road-line-4, .center .back .road .road-line-4 {
-  width: 10px;
-  height: 3px;
-  border-radius: 3px;
-  background-color: #9e0e0e;
-  position: absolute;
-  -webkit-animation: road 1s linear 1s infinite;
-          animation: road 1s linear 1s infinite;
-  left: 0;
-  -webkit-filter: blur(0.7px);
-          filter: blur(0.7px);
-}
-
-.center .front .road .road-line-5, .center .back .road .road-line-5 {
-  width: 12px;
   height: 3px;
   border-radius: 3px;
   background-color: #9e0e0e;
@@ -172,10 +130,11 @@ body {
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
+  opacity: 0;
 }
 
-.center .front .road .road-line-6, .center .back .road .road-line-6 {
-  width: 14px;
+.front .road .road-line-2, .back .road .road-line-2 {
+  width: 6px;
   height: 3px;
   border-radius: 3px;
   background-color: #9e0e0e;
@@ -185,66 +144,301 @@ body {
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
+  opacity: 0;
 }
 
-.center .front .road .road-line-7, .center .back .road .road-line-7 {
+.front .road .road-line-3, .back .road .road-line-3 {
+  width: 8px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #9e0e0e;
+  position: absolute;
+  -webkit-animation: road 1s linear 0.1s infinite;
+          animation: road 1s linear 0.1s infinite;
+  left: 0;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+  opacity: 0;
+}
+
+.front .road .road-line-4, .back .road .road-line-4 {
+  width: 10px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #9e0e0e;
+  position: absolute;
+  -webkit-animation: road 1s linear 0.4s infinite;
+          animation: road 1s linear 0.4s infinite;
+  left: 0;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+  opacity: 0;
+}
+
+.front .road .road-line-5, .back .road .road-line-5 {
+  width: 12px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #9e0e0e;
+  position: absolute;
+  -webkit-animation: road 1s linear 0.9s infinite;
+          animation: road 1s linear 0.9s infinite;
+  left: 0;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+  opacity: 0;
+}
+
+.front .road .road-line-6, .back .road .road-line-6 {
+  width: 14px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #9e0e0e;
+  position: absolute;
+  -webkit-animation: road 1s linear 0.6s infinite;
+          animation: road 1s linear 0.6s infinite;
+  left: 0;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+  opacity: 0;
+}
+
+.front .road .road-line-7, .back .road .road-line-7 {
   width: 16px;
   height: 3px;
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 1s linear 0.5s infinite;
-          animation: road 1s linear 0.5s infinite;
+  -webkit-animation: road 0.9s linear 0.8s infinite;
+          animation: road 0.9s linear 0.8s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
+  opacity: 0;
+}
+
+.back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  top: -180px;
+}
+
+.back .plane {
+  font-size: 10em;
+  color: #9e0e0e;
+  text-align: center;
+  -webkit-animation: plane 1.5s ease-in-out infinite;
+          animation: plane 1.5s ease-in-out infinite;
+  position: absolute;
+  top: -25px;
+}
+
+.back .sky {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  bottom: 0;
+  width: 160px;
+  overflow: hidden;
+}
+
+.back .sky .cloud-1 {
+  position: absolute;
+  right: -25px;
+  top: 34px;
+  height: 3px;
+  width: 22.6px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.1s infinite;
+          animation: cloud 0.7s linear 0.1s infinite;
+}
+
+.back .sky .cloud-2 {
+  position: absolute;
+  right: -25px;
+  top: 48px;
+  height: 3px;
+  width: 19.7px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.6s infinite;
+          animation: cloud 0.8s linear 0.6s infinite;
+}
+
+.back .sky .cloud-3 {
+  position: absolute;
+  right: -25px;
+  top: 62px;
+  height: 3px;
+  width: 22.7px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.8s infinite;
+          animation: cloud 0.8s linear 0.8s infinite;
+}
+
+.back .sky .cloud-4 {
+  position: absolute;
+  right: -25px;
+  top: 76px;
+  height: 3px;
+  width: 17.1px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.9s infinite;
+          animation: cloud 0.7s linear 0.9s infinite;
+}
+
+.back .sky .cloud-5 {
+  position: absolute;
+  right: -25px;
+  top: 90px;
+  height: 3px;
+  width: 21.9px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.4s infinite;
+          animation: cloud 0.8s linear 0.4s infinite;
+}
+
+.back .sky .cloud-6 {
+  position: absolute;
+  right: -25px;
+  top: 104px;
+  height: 3px;
+  width: 13.4px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.4s infinite;
+          animation: cloud 0.8s linear 0.4s infinite;
+}
+
+.back .sky .cloud-7 {
+  position: absolute;
+  right: -25px;
+  top: 118px;
+  height: 3px;
+  width: 17.5px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.6s infinite;
+          animation: cloud 0.8s linear 0.6s infinite;
+}
+
+.back .sky .cloud-8 {
+  position: absolute;
+  right: -25px;
+  top: 132px;
+  height: 3px;
+  width: 11.7px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.4s infinite;
+          animation: cloud 0.7s linear 0.4s infinite;
+}
+
+.back .sky .cloud-9 {
+  position: absolute;
+  right: -25px;
+  top: 146px;
+  height: 3px;
+  width: 15.9px;
+  background: #9e0e0e;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.8s infinite;
+          animation: cloud 0.7s linear 0.8s infinite;
 }
 
 @-webkit-keyframes road {
   0% {
-    -webkit-transform: translate3d(200px, 0, 0);
-            transform: translate3d(200px, 0, 0);
+    -webkit-transform: translate3d(270px, 0, 0);
+            transform: translate3d(270px, 0, 0);
+    opacity: 1;
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
 @keyframes road {
   0% {
-    -webkit-transform: translate3d(200px, 0, 0);
-            transform: translate3d(200px, 0, 0);
+    -webkit-transform: translate3d(270px, 0, 0);
+            transform: translate3d(270px, 0, 0);
+    opacity: 1;
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes car {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
   100% {
-    -webkit-transform: scale(1.015);
-            transform: scale(1.015);
+    -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
   }
 }
 
 @keyframes car {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
   100% {
-    -webkit-transform: scale(1.015);
-            transform: scale(1.015);
+    -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
   }
 }
 
-.center .back {
-  display: none;
+@-webkit-keyframes plane {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes plane {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+
+@-webkit-keyframes cloud {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
+}
+
+@keyframes cloud {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
 }
 /*# sourceMappingURL=style.css.map */
