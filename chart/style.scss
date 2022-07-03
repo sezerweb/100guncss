@@ -1,0 +1,34 @@
+@import "_base.scss";
+.frame { 
+  background: #fff; 
+}
+
+.chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; 
+  background: conic-gradient(red 0%, blue 0);
+  animation: chart 2s  ease infinite;
+  
+}
+
+@keyframes chart {
+
+  0%{
+    background: conic-gradient(red 25%, blue 0);
+  
+  }
+  50%{
+    background: conic-gradient(red 50%, blue 0);
+  
+  }
+
+  75%{
+    background: conic-gradient(red 75%, blue 0);
+  
+  }
+  100%{
+    background: conic-gradient(red 100%, blue 0);
+  
+  }
+}

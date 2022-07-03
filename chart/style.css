@@ -1,0 +1,84 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #F6FBF4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.frame {
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  overflow: hidden;
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.frame {
+  background: #fff;
+}
+
+.chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(red 0%, blue 0);
+  -webkit-animation: chart 2s  ease infinite;
+          animation: chart 2s  ease infinite;
+}
+
+@-webkit-keyframes chart {
+  0% {
+    background: conic-gradient(red 25%, blue 0);
+  }
+  50% {
+    background: conic-gradient(red 50%, blue 0);
+  }
+  75% {
+    background: conic-gradient(red 75%, blue 0);
+  }
+  100% {
+    background: conic-gradient(red 100%, blue 0);
+  }
+}
+
+@keyframes chart {
+  0% {
+    background: conic-gradient(red 25%, blue 0);
+  }
+  50% {
+    background: conic-gradient(red 50%, blue 0);
+  }
+  75% {
+    background: conic-gradient(red 75%, blue 0);
+  }
+  100% {
+    background: conic-gradient(red 100%, blue 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

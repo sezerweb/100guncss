@@ -1,0 +1,111 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #F6FBF4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.frame {
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  overflow: hidden;
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.frame {
+  background: #fff;
+  padding: 1em;
+}
+
+input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion .accordion-item {
+  margin-bottom: 2px;
+}
+
+.accordion .accordion-item:first-child .accordion-title-area {
+  border-bottom: none;
+}
+
+.accordion .accordion-item .accordion-title-area {
+  border: 1px solid;
+  padding: 0.5em;
+  display: block;
+  cursor: pointer;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accordion .accordion-item .accordion-title-area::before {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.accordion .accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 0 1em;
+}
+
+.accordion .accordion-item input:checked ~ .accordion-title-area {
+  border: 1px solid;
+}
+
+.accordion .accordion-item input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.accordion .accordion-item input:checked ~ .accordion-title-area::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*# sourceMappingURL=style.css.map */
