@@ -12,11 +12,10 @@ body{
   box-sizing: border-box;
 }
 
-.frame {
-  border-radius: 4px;
-  box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+.frame { 
+ 
   overflow: hidden;
-  background: #fff; 
+  background-color: #F6FBF4;
   width: 400px;
   height: 400px;
   display: flex;

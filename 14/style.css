@@ -125,8 +125,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 1s linear 0.5s infinite;
-          animation: road 1s linear 0.5s infinite;
+  -webkit-animation: road 1s linear 0.6s infinite;
+          animation: road 1s linear 0.6s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -139,8 +139,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 0.9s linear 0.6s infinite;
-          animation: road 0.9s linear 0.6s infinite;
+  -webkit-animation: road 1s linear 0.3s infinite;
+          animation: road 1s linear 0.3s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -153,8 +153,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 1s linear 0.3s infinite;
-          animation: road 1s linear 0.3s infinite;
+  -webkit-animation: road 1s linear 0.7s infinite;
+          animation: road 1s linear 0.7s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -167,8 +167,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 0.9s linear 0.9s infinite;
-          animation: road 0.9s linear 0.9s infinite;
+  -webkit-animation: road 0.9s linear 1s infinite;
+          animation: road 0.9s linear 1s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -181,8 +181,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 0.9s linear 0.8s infinite;
-          animation: road 0.9s linear 0.8s infinite;
+  -webkit-animation: road 1s linear 0.8s infinite;
+          animation: road 1s linear 0.8s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -195,8 +195,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 0.9s linear 0.3s infinite;
-          animation: road 0.9s linear 0.3s infinite;
+  -webkit-animation: road 1s linear 0.8s infinite;
+          animation: road 1s linear 0.8s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -209,8 +209,8 @@ body {
   border-radius: 3px;
   background-color: #9e0e0e;
   position: absolute;
-  -webkit-animation: road 1s linear 0.8s infinite;
-          animation: road 1s linear 0.8s infinite;
+  -webkit-animation: road 0.9s linear 1s infinite;
+          animation: road 0.9s linear 1s infinite;
   left: 0;
   -webkit-filter: blur(0.7px);
           filter: blur(0.7px);
@@ -247,11 +247,11 @@ body {
   right: -25px;
   top: 34px;
   height: 3px;
-  width: 23.1px;
+  width: 22.6px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.7s linear 0.8s infinite;
-          animation: cloud 0.7s linear 0.8s infinite;
+  -webkit-animation: cloud 0.7s linear 0.7s infinite;
+          animation: cloud 0.7s linear 0.7s infinite;
 }
 
 .back .sky .cloud-2 {
@@ -259,11 +259,11 @@ body {
   right: -25px;
   top: 48px;
   height: 3px;
-  width: 22.4px;
+  width: 17.3px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.7s linear 0.2s infinite;
-          animation: cloud 0.7s linear 0.2s infinite;
+  -webkit-animation: cloud 0.8s linear 1s infinite;
+          animation: cloud 0.8s linear 1s infinite;
 }
 
 .back .sky .cloud-3 {
@@ -271,11 +271,11 @@ body {
   right: -25px;
   top: 62px;
   height: 3px;
-  width: 19.7px;
+  width: 23.6px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.8s linear 0.3s infinite;
-          animation: cloud 0.8s linear 0.3s infinite;
+  -webkit-animation: cloud 0.7s linear 0.1s infinite;
+          animation: cloud 0.7s linear 0.1s infinite;
 }
 
 .back .sky .cloud-4 {
@@ -283,11 +283,11 @@ body {
   right: -25px;
   top: 76px;
   height: 3px;
-  width: 21.2px;
+  width: 14.9px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.7s linear 0.6s infinite;
-          animation: cloud 0.7s linear 0.6s infinite;
+  -webkit-animation: cloud 0.8s linear 0.6s infinite;
+          animation: cloud 0.8s linear 0.6s infinite;
 }
 
 .back .sky .cloud-5 {
@@ -295,11 +295,11 @@ body {
   right: -25px;
   top: 90px;
   height: 3px;
-  width: 23.4px;
+  width: 21.8px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.7s linear 1s infinite;
-          animation: cloud 0.7s linear 1s infinite;
+  -webkit-animation: cloud 0.8s linear 0.9s infinite;
+          animation: cloud 0.8s linear 0.9s infinite;
 }
 
 .back .sky .cloud-6 {
@@ -307,11 +307,11 @@ body {
   right: -25px;
   top: 104px;
   height: 3px;
-  width: 16.8px;
+  width: 10.5px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.8s linear 0.1s infinite;
-          animation: cloud 0.8s linear 0.1s infinite;
+  -webkit-animation: cloud 0.7s linear 0.7s infinite;
+          animation: cloud 0.7s linear 0.7s infinite;
 }
 
 .back .sky .cloud-7 {
@@ -319,11 +319,11 @@ body {
   right: -25px;
   top: 118px;
   height: 3px;
-  width: 24px;
+  width: 18.3px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.8s linear 0.5s infinite;
-          animation: cloud 0.8s linear 0.5s infinite;
+  -webkit-animation: cloud 0.7s linear 1s infinite;
+          animation: cloud 0.7s linear 1s infinite;
 }
 
 .back .sky .cloud-8 {
@@ -331,11 +331,11 @@ body {
   right: -25px;
   top: 132px;
   height: 3px;
-  width: 21.8px;
+  width: 12.8px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.7s linear 0.4s infinite;
-          animation: cloud 0.7s linear 0.4s infinite;
+  -webkit-animation: cloud 0.7s linear 0.2s infinite;
+          animation: cloud 0.7s linear 0.2s infinite;
 }
 
 .back .sky .cloud-9 {
@@ -343,11 +343,11 @@ body {
   right: -25px;
   top: 146px;
   height: 3px;
-  width: 22.4px;
+  width: 18px;
   background: #9e0e0e;
   border-radius: 3px;
-  -webkit-animation: cloud 0.8s linear 0.8s infinite;
-          animation: cloud 0.8s linear 0.8s infinite;
+  -webkit-animation: cloud 0.8s linear 0.6s infinite;
+          animation: cloud 0.8s linear 0.6s infinite;
 }
 
 @-webkit-keyframes road {

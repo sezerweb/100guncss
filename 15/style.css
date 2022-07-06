@@ -21,11 +21,8 @@ body {
 }
 
 .frame {
-  border-radius: 4px;
-  -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
-          box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
   overflow: hidden;
-  background: #fff;
+  background-color: #F6FBF4;
   width: 400px;
   height: 400px;
   display: -webkit-box;
@@ -40,7 +37,6 @@ body {
 }
 
 .frame {
-  background: #fff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #38380b;
 }
@@ -63,9 +59,29 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 6px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(75, 134, 115, 0.1);
+  position: relative;
 }
 
-.upload-header {
+.center:hover .upload-bar {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.center .upload-bar {
+  width: 100%;
+  height: 3px;
+  background-color: #777718;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.center .upload-header {
   width: 100%;
   height: 36px;
   text-align: center;
@@ -81,32 +97,42 @@ body {
           align-items: center;
 }
 
-.drop-area {
+.center .drop-area {
   width: 100px;
   height: 100px;
   background-color: #ececbe;
   margin-top: 50px;
   border: 1px dashed;
   position: relative;
-  cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
-.drop-area:hover {
+.center .drop-area:hover {
   -webkit-box-shadow: 0 0 12px #1b1b0642;
           box-shadow: 0 0 12px #1b1b0642;
 }
 
-.drop-area:hover::after {
+.center .drop-area:hover::after {
   -webkit-animation: upload-arrow .9s ease-in infinite;
           animation: upload-arrow .9s ease-in infinite;
 }
 
-.drop-area::before {
+.center .drop-area .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.center .drop-area::before {
   content: "\2601";
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,10 +146,10 @@ body {
   position: absolute;
 }
 
-.drop-area::after {
+.center .drop-area::after {
   content: "\21e7";
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,7 +165,7 @@ body {
   margin-top: 5px;
 }
 
-.upload {
+.center .upload {
   margin-top: 50px;
   padding: 8px 4px;
   width: 120px;
@@ -154,10 +180,27 @@ body {
   transition: all 0.5s ease;
 }
 
-.upload:hover {
+.center .upload:hover {
   background-color: #9e9e34;
   -webkit-box-shadow: 0 0 15px #9e9e3470;
           box-shadow: 0 0 15px #9e9e3470;
+}
+
+.center .file-name {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8em;
+  text-align: center;
+  position: absolute;
 }
 
 @-webkit-keyframes upload-arrow {

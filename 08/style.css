@@ -60,8 +60,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(48deg);
-          transform: rotate(48deg);
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .blubb-1:after {
@@ -86,8 +86,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(66deg);
-          transform: rotate(66deg);
+  -webkit-transform: rotate(105deg);
+          transform: rotate(105deg);
 }
 
 .blubb-2:after {
@@ -112,8 +112,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(215deg);
-          transform: rotate(215deg);
+  -webkit-transform: rotate(155deg);
+          transform: rotate(155deg);
 }
 
 .blubb-3:after {
@@ -138,8 +138,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(275deg);
-          transform: rotate(275deg);
+  -webkit-transform: rotate(122deg);
+          transform: rotate(122deg);
 }
 
 .blubb-4:after {
@@ -164,8 +164,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+  -webkit-transform: rotate(290deg);
+          transform: rotate(290deg);
 }
 
 .blubb-5:after {
@@ -190,8 +190,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(93deg);
-          transform: rotate(93deg);
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 
 .blubb-6:after {
@@ -216,8 +216,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(160deg);
-          transform: rotate(160deg);
+  -webkit-transform: rotate(149deg);
+          transform: rotate(149deg);
 }
 
 .blubb-7:after {
@@ -242,8 +242,8 @@ body {
   left: 140px;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  -webkit-transform: rotate(149deg);
+          transform: rotate(149deg);
 }
 
 .blubb-8:after {
@@ -268,8 +268,8 @@ body {
   left: 188px;
   width: 8px;
   height: 8px;
-  -webkit-transform: rotate(298deg);
-          transform: rotate(298deg);
+  -webkit-transform: rotate(186deg);
+          transform: rotate(186deg);
 }
 
 .sparkle-1:after {
@@ -294,8 +294,8 @@ body {
   left: 188px;
   width: 9px;
   height: 9px;
-  -webkit-transform: rotate(63deg);
-          transform: rotate(63deg);
+  -webkit-transform: rotate(143deg);
+          transform: rotate(143deg);
 }
 
 .sparkle-2:after {
@@ -320,8 +320,8 @@ body {
   left: 188px;
   width: 10px;
   height: 10px;
-  -webkit-transform: rotate(44deg);
-          transform: rotate(44deg);
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
 }
 
 .sparkle-3:after {
@@ -346,8 +346,8 @@ body {
   left: 188px;
   width: 11px;
   height: 11px;
-  -webkit-transform: rotate(162deg);
-          transform: rotate(162deg);
+  -webkit-transform: rotate(234deg);
+          transform: rotate(234deg);
 }
 
 .sparkle-4:after {
@@ -372,8 +372,8 @@ body {
   left: 188px;
   width: 12px;
   height: 12px;
-  -webkit-transform: rotate(56deg);
-          transform: rotate(56deg);
+  -webkit-transform: rotate(219deg);
+          transform: rotate(219deg);
 }
 
 .sparkle-5:after {
@@ -398,8 +398,8 @@ body {
   left: 188px;
   width: 13px;
   height: 13px;
-  -webkit-transform: rotate(262deg);
-          transform: rotate(262deg);
+  -webkit-transform: rotate(281deg);
+          transform: rotate(281deg);
 }
 
 .sparkle-6:after {
@@ -424,8 +424,8 @@ body {
   left: 188px;
   width: 14px;
   height: 14px;
-  -webkit-transform: rotate(216deg);
-          transform: rotate(216deg);
+  -webkit-transform: rotate(227deg);
+          transform: rotate(227deg);
 }
 
 .sparkle-7:after {
@@ -450,8 +450,8 @@ body {
   left: 188px;
   width: 15px;
   height: 15px;
-  -webkit-transform: rotate(217deg);
-          transform: rotate(217deg);
+  -webkit-transform: rotate(139deg);
+          transform: rotate(139deg);
 }
 
 .sparkle-8:after {

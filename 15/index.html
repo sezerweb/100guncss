@@ -11,10 +11,23 @@
     <div class="frame">
         <div class="center">
             <div class="upload-header">Drop or select file to upload</div>
-            <div class="drop-area"></div>
+            <div class="upload-bar"></div>
+            <div class="drop-area">
+                <span class="file-name"> </span>
+                <input type="file" class="input">
+                
+            </div>
+            
             <button type="button" class="upload" disabled>Upload File</button>
 
         </div>
     </div>
+    <script>
+        const fileInput = document.querySelector(".input") ;
+        const fileName = document.querySelector(".file-name") ;
+        fileInput.addEventListener('change', ()=>{
+            fileName.textContent = fileInput.files[0].name ;
+        });
+    </script>
 </body>
 </html>
