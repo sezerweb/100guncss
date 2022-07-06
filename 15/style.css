@@ -41,18 +41,144 @@ body {
 
 .frame {
   background: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #38380b;
 }
 
 .center {
+  width: 300px;
+  height: 300px;
+  background-color: beige;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 6px;
+}
+
+.upload-header {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  border-bottom: 1px solid #d4d46a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.drop-area {
+  width: 100px;
+  height: 100px;
+  background-color: #ececbe;
+  margin-top: 50px;
+  border: 1px dashed;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.drop-area:hover {
+  -webkit-box-shadow: 0 0 12px #1b1b0642;
+          box-shadow: 0 0 12px #1b1b0642;
+}
+
+.drop-area:hover::after {
+  -webkit-animation: upload-arrow .9s ease-in infinite;
+          animation: upload-arrow .9s ease-in infinite;
+}
+
+.drop-area::before {
+  content: "\2601";
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3em;
+  position: absolute;
+}
+
+.drop-area::after {
+  content: "\21e7";
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+  position: absolute;
+  color: #ececbe;
+  margin-top: 5px;
+}
+
+.upload {
+  margin-top: 50px;
+  padding: 8px 4px;
+  width: 120px;
+  color: #fff;
+  background-color: #777718;
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-bottom-color: #33330A;
+  border-radius: 4px;
+  cursor: not-allowed;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.upload:hover {
+  background-color: #9e9e34;
+  -webkit-box-shadow: 0 0 15px #9e9e3470;
+          box-shadow: 0 0 15px #9e9e3470;
+}
+
+@-webkit-keyframes upload-arrow {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 6px, 0);
+            transform: translate3d(0, 6px, 0);
+  }
+}
+
+@keyframes upload-arrow {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 6px, 0);
+            transform: translate3d(0, 6px, 0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

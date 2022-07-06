@@ -1,11 +1,96 @@
 @import "_base.scss";
-.frame { 
-  background: #fff; 
+.frame {
+  background: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #38380b;
 }
 
 .center {
+  width: 300px;
+  height: 300px;
+  background-color: beige;
   display: flex;
+  justify-content: start;
+  flex-direction: column;
   align-items: center;
+  border-radius: 6px;
+}
+.upload-header {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  border-bottom: 1px solid #d4d46a;
+  display: flex;
   justify-content: center;
-  min-height: 100%; 
+  align-items: center;
+}
+.drop-area {
+  width: 100px;
+  height: 100px;
+  background-color: #ececbe;
+  margin-top: 50px;
+  border: 1px dashed;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  &:hover {
+    &::after {
+      animation: upload-arrow .9s ease-in infinite;
+    }
+   box-shadow: 0 0 12px #1b1b0642;
+
+  }
+
+  &::before {
+    content: "\2601";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    position: absolute;
+  }
+
+  &::after {
+    content: "\21e7";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    position: absolute;
+    color: #ececbe;
+    margin-top: 5px; 
+  }
+}
+
+.upload {
+  margin-top: 50px;
+  padding: 8px 4px;
+  width: 120px;
+  color: #fff;
+  background-color: #777718;
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-bottom-color: #33330A;
+  border-radius: 4px;
+  cursor: not-allowed;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: #9e9e34;
+    box-shadow: 0 0 15px #9e9e3470;
+  }
+}
+
+@keyframes upload-arrow {
+  0%, 100%{
+    transform: translate3d(0, 0, 0);
+  }
+  50%{
+    transform: translate3d(0, 6px, 0);
+  }
+  
 }
