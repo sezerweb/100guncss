@@ -25,9 +25,58 @@
     <script>
         const fileInput = document.querySelector(".input") ;
         const fileName = document.querySelector(".file-name") ;
+        const dropArea = document.querySelector(".drop-area") ;
         fileInput.addEventListener('change', ()=>{
             fileName.textContent = fileInput.files[0].name ;
         });
+
+        /*dropArea.addEventListener('drag',(event)=>{
+            console.log('drag',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+        
+      dropArea.addEventListener('dragend',(event)=>{
+            console.log('dragend',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+        */
+          dropArea.addEventListener('dragenter',(event)=>{
+            console.log('dragenter',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+       
+      dropArea.addEventListener('dragleave',(event)=>{
+            console.log('dragleave',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+
+         /* 
+        dropArea.addEventListener('dragover',(event)=>{
+            console.log('dragover',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+
+        dropArea.addEventListener('dragstart',(event)=>{
+            console.log('dragstart',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+
+        dropArea.addEventListener('drop',(event)=>{
+            console.log('drop',event);
+            event.preventDefault();
+            event.stopPropagation() ;
+        });
+        */
+
+
+        //drag, dragend,dragenter,dragleave,dragover,dragstart, drop
+
     </script>
 </body>
 </html>
